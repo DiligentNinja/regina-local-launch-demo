@@ -1,6 +1,10 @@
 # Regina Local Launch — first-wave sites
 
-Production-quality marketing previews for nine real Regina, SK trade businesses. The offer is: **I already built this for you — want it live on your domain for $449 CAD?**
+**Ready to merge first:** King Electric and Always Roofing — one landing page each, sticky click-to-call, distinct identity.
+
+Seven more trade previews live in `/sites/` and are not blocking this pair.
+
+The offer is: **I already built this for you — want it live on your domain for $449 CAD?**
 
 This is a static HTML/CSS project. No build step, no paid APIs, no invented contact data.
 
@@ -20,8 +24,8 @@ Or open any `index.html` file directly in a browser. Google Fonts need a network
 
 | Business | Path | Phone |
 |---|---|---|
-| King Electric LTD. | [sites/king-electric/](sites/king-electric/) | 306-581-9837 |
-| Always Roofing and Contracting | [sites/always-roofing/](sites/always-roofing/) | 306-209-5007 |
+| King Electric LTD. **ready** | [sites/king-electric/](sites/king-electric/) | 306-581-9837 |
+| Always Roofing and Contracting **ready** | [sites/always-roofing/](sites/always-roofing/) | 306-209-5007 |
 | Apperley Electric Ltd. | [sites/apperley-electric/](sites/apperley-electric/) | 306-525-9704 |
 | Majestic Air Inc. | [sites/majestic-air/](sites/majestic-air/) | 306-525-3588 |
 | Action Roofing Ltd. | [sites/action-roofing/](sites/action-roofing/) | 306-545-4677 |
