@@ -7,7 +7,7 @@
   <meta name="description" content="Regina commercial, residential, and rural electrical. Mosaic Stadium, four P3 schools, Sasktel downtown as published. Mon–Fri 7–5, on call 24 hours. 306-536-4737." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -25,85 +25,63 @@
 
   <div class="stage">
     <main id="main">
-      <section class="hero">
-        <img src="assets/fresh-yard.png" alt="" width="1600" height="900" />
-        <div class="hero-copy">
-          <p class="cap">Atmospheric plate — prairie yard light. Not a Fresh job photograph.</p>
-          <h1>Everyone sweeps.</h1>
-          <p class="lede">Their line. First-year apprentice or the owner — everyone works to get the job done. Commercial. Residential. Rural. Free estimates. On call 24 hours.</p>
-          <a class="cta" href="tel:+13065364737">306-536-4737</a>
-        </div>
+      <section class="blast">
+        <h1>Everyone<span>sweeps.</span></h1>
+        <figure class="stamp">
+          <img src="assets/fresh-yard.png" alt="" width="560" height="700" />
+          <figcaption>Atmospheric plate — prairie yard light. Not a Fresh job photograph. Not paired with named work.</figcaption>
+        </figure>
+        <p class="lede">Their line. First-year apprentice or the owner — everyone works to get the job done. Commercial. Residential. Rural. Free estimates. On call 24 hours.</p>
+        <a class="cta" href="tel:+13065364737">306-536-4737</a>
       </section>
 
-      <section class="proof">
-        <p class="cap">Named work · text only</p>
-        <h2>What they print. Not a picture of it.</h2>
-        <p class="src">Source: freshelectricltd.ca. No site photographs of these jobs are published here. The names are theirs.</p>
-        <ol class="names">
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Commercial</span><span>Residential</span><span>Rural / farm</span><span>Controls</span><span>Data</span>
+          <span>Commercial</span><span>Residential</span><span>Rural / farm</span><span>Controls</span><span>Data</span>
+        </div>
+      </div>
+
+      <section class="index">
+        <p class="src">Named work · text only. Source: freshelectricltd.ca. No photographs of these jobs are published here. The names are theirs.</p>
+        <ol>
           <li>
-            <b>Provincial</b>
-            <div>
-              <h3>Mosaic Stadium</h3>
-              <p>Listed among the largest projects they have worked. Confirm on the call whether your site is in that book.</p>
-            </div>
+            <b>Provincial · as printed</b>
+            <h2>Mosaic Stadium</h2>
+            <p>Listed among the largest projects they have worked. Confirm on the call whether your site is in that book.</p>
           </li>
           <li>
-            <b>Schools</b>
-            <div>
-              <h3>Four of the P3 schools</h3>
-              <p>Institutional work they name. New construction and renovation sit on the same public page.</p>
-            </div>
+            <b>Schools · as printed</b>
+            <h2>Four of the P3 schools</h2>
+            <p>Institutional work they name. New construction and renovation sit on the same public page.</p>
           </li>
           <li>
-            <b>Downtown</b>
-            <div>
-              <h3>The new Sasktel building</h3>
-              <p>Downtown Regina. Same shop that lists farmyard lights and boiler upgrades.</p>
-            </div>
+            <b>Downtown · as printed</b>
+            <h2>The new Sasktel building</h2>
+            <p>Downtown Regina. Same shop that lists farmyard lights and boiler upgrades.</p>
           </li>
         </ol>
       </section>
 
-      <section class="ledger" aria-label="Daily book">
-        <article>
-          <p class="cap">Commercial</p>
-          <h3>Data. Service. Light.</h3>
-          <p>Data line, service work, lighting upgrades, commercial electrical for new construction and renovations. On-call service. Free estimates.</p>
-        </article>
-        <article>
-          <p class="cap">Residential</p>
-          <h3>Panel to alarm.</h3>
-          <p>Panel upgrades, basement renovations, service work, lighting upgrades, smoke detectors, fire alarm wiring.</p>
-        </article>
-        <article>
-          <p class="cap">Rural / farm</p>
-          <h3>Yard light. Trench.</h3>
-          <p>Yard light changeouts, trenching, lighting upgrades, service and troubleshooting in Regina and surrounding.</p>
-        </article>
-        <article>
-          <p class="cap">Controls</p>
-          <h3>Heat, cool, boiler.</h3>
-          <p>Heating and cooling systems including boiler upgrades. Electrical controls and troubleshooting.</p>
-        </article>
+      <section class="tape" aria-label="Daily book">
+        <article><p class="k">Commercial</p><div><h3>Data. Service. Light.</h3><p>Data line, service work, lighting upgrades, commercial electrical for new construction and renovations. On-call service. Free estimates.</p></div></article>
+        <article><p class="k">Residential</p><div><h3>Panel to alarm.</h3><p>Panel upgrades, basement renovations, service work, lighting upgrades, smoke detectors, fire alarm wiring.</p></div></article>
+        <article><p class="k">Rural / farm</p><div><h3>Yard light. Trench.</h3><p>Yard light changeouts, trenching, lighting upgrades, service and troubleshooting in Regina and surrounding.</p></div></article>
+        <article><p class="k">Controls</p><div><h3>Heat, cool, boiler.</h3><p>Heating and cooling systems including boiler upgrades. Electrical controls and troubleshooting.</p></div></article>
       </section>
 
-      <figure class="plate">
-        <div class="media" style="background-image:url('assets/fresh-sweep.png')" role="img" aria-label=""></div>
-        <figcaption>Atmospheric plate — empty shop floor, broom. Not evidence of a named job. Used as art direction only.</figcaption>
+      <figure class="object">
+        <img src="assets/fresh-sweep.png" alt="" width="440" height="440" />
+        <figcaption>Atmospheric plate — empty shop floor, broom. Art direction only. Not evidence of Mosaic, the P3 schools, or Sasktel.</figcaption>
       </figure>
 
       <section class="intake">
-        <p class="cap">Intake</p>
-        <h2>What to have on the line.</h2>
+        <h2>On the line.</h2>
         <dl>
-          <dt>Number</dt>
-          <dd>306-536-4737</dd>
-          <dt>Site</dt>
-          <dd>Address. Commercial, house, or farm.</dd>
-          <dt>Fault</dt>
-          <dd>Panel, light, data, boiler, trench — whatever is actually down.</dd>
-          <dt>Mail</dt>
-          <dd>PO Box 845, Pilot Butte, SK S0G 3Z0. Work is Regina and surrounding.</dd>
+          <dt>Number</dt><dd>306-536-4737</dd>
+          <dt>Site</dt><dd>Address. Commercial, house, or farm.</dd>
+          <dt>Fault</dt><dd>Panel, light, data, boiler, trench — whatever is actually down.</dd>
+          <dt>Mail</dt><dd>PO Box 845, Pilot Butte, SK S0G 3Z0. Work is Regina and surrounding.</dd>
         </dl>
         <div class="clock">
           <strong>Mon–Fri 7 a.m.–5 p.m.</strong>
