@@ -2,7 +2,7 @@
 
 Full agency marketing sites for real Regina, SK trade businesses. Each brand is meant to read as a finished shop site: **Home · Services · About · Contact**, sticky click-to-call, and only public facts.
 
-**First pair at the full bar:** King Electric and Always Roofing.
+**First pair at the full bar:** King Electric (Home / The work / The shop) and Always Roofing (Home / The envelope / Reach Mike). Call-only. No invented hours or reviews.
 
 ## Open locally
 
@@ -16,8 +16,8 @@ Then open [http://localhost:4173](http://localhost:4173).
 
 | Business | Path | Pages |
 |---|---|---|
-| King Electric LTD. | [sites/king-electric/](sites/king-electric/) | index, services, about, contact |
-| Always Roofing and Contracting | [sites/always-roofing/](sites/always-roofing/) | index, services, about, contact |
+| King Electric LTD. | [sites/king-electric/](sites/king-electric/) | index, calls, shop |
+| Always Roofing and Contracting | [sites/always-roofing/](sites/always-roofing/) | index, envelope, reach |
 | Apperley Electric Ltd. | [sites/apperley-electric/](sites/apperley-electric/) | index, services, about, contact |
 | Majestic Air Inc. | [sites/majestic-air/](sites/majestic-air/) | index, services, about, contact |
 | Action Roofing Ltd. | [sites/action-roofing/](sites/action-roofing/) | index, services, about, contact |
