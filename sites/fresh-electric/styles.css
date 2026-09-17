@@ -67,14 +67,15 @@ nav a[aria-current="page"], nav a:hover { color: var(--leaf); }
   position: absolute;
   left: 0; top: 0; bottom: 0;
   z-index: 3;
-  width: 5.6rem;
+  width: 4.75rem;
+  overflow: hidden;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--display);
   font-weight: 900;
-  font-size: clamp(3.6rem, 9vw, 7rem);
-  letter-spacing: 0.06em;
+  font-size: 3.6rem;
+  letter-spacing: 0.14em;
   color: var(--void);
   background: var(--leaf);
   padding: 1rem 0;
@@ -98,10 +99,9 @@ nav a[aria-current="page"], nav a:hover { color: var(--leaf); }
     linear-gradient(180deg, rgba(7,11,10,0.15) 20%, rgba(7,11,10,0.88) 88%);
 }
 .hero-copy {
-  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  position: absolute; left: 5.6rem; right: 0; bottom: 0; z-index: 2;
   padding: clamp(1.4rem, 4vw, 3.2rem);
-  padding-left: clamp(6.6rem, 8vw, 8.2rem);
-  max-width: 52rem;
+  max-width: 48rem;
 }
 .kicker {
   margin: 0 0 0.7rem;
