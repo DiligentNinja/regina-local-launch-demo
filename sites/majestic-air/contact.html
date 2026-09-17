@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Majestic Air Inc.</title>
+  <meta name="description" content="Call Majestic Air at 306-525-3588. 1431 Cornwall St., Regina." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="bar">
+    <a class="mark" href="index.html">Majestic Air <em>Inc.</em></a>
+    <nav aria-label="Primary"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a></nav>
+    <a class="call" href="tel:+13065253588">306-525-3588</a>
+  </header>
+  <main id="main">
+
+    <header class="page-hero"><p class="eyebrow">Dispatch</p><h1>Talk to Majestic.</h1></header>
+    <section class="contact">
+      <div>
+        <address><strong>Majestic Air Inc.</strong><br />1431 Cornwall St., Regina, SK S4R 2H8<br />
+        <a href="tel:+13065253588">306-525-3588</a><br />
+        <a href="mailto:majestic.air@sasktel.net">majestic.air@sasktel.net</a></address>
+        <p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=1431+Cornwall+St+Regina+SK+S4R+2H8">Open in Google Maps</a></p>
+      </div>
+      <form class="form" id="lead">
+        <h3>Request a callback</h3>
+        <label>Name <input name="name" required autocomplete="name" /></label>
+        <label>Phone <input name="phone" type="tel" required autocomplete="tel" /></label>
+        <label>System <select name="need"><option>Rooftop / make-up air</option><option>Air conditioning</option><option>Heating / boiler</option><option>Refrigeration</option><option>Computer room / booth / drier</option><option>24/7 emergency</option></select></label>
+        <label>Site notes <textarea name="notes" rows="4"></textarea></label>
+        <button class="btn solid" type="submit">Send request</button>
+        <p class="status" id="status" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+  <a class="dock" href="tel:+13065253588">Call 306-525-3588</a>
+  <footer class="foot"><p>Majestic Air Inc. · 1431 Cornwall St., Regina</p><p><a href='services.html'>Services</a> · <a href='about.html'>About</a> · <a href='contact.html'>Contact</a></p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

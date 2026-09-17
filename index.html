@@ -3,95 +3,192 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prairie Heat & Cool — Regina HVAC</title>
-  <meta name="description" content="Same-day HVAC service in Regina. Furnace, AC, and heat pumps. Call for a free quote." />
-  <meta property="og:title" content="Prairie Heat & Cool — Regina HVAC" />
-  <meta property="og:description" content="Same-day HVAC in Regina. Furnace · AC · Heat pumps." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Regina Local Launch — First-wave trade sites</title>
+  <meta name="description" content="Full agency marketing sites for real Regina trade businesses — Home, Services, About, and Contact." />
+  <meta property="og:title" content="Regina Local Launch — First wave" />
+  <meta property="og:description" content="Nine real shops. Full sites. Public facts only." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0b0c;
+      --paper: #f4efe6;
+      --mute: #9a9388;
+      --line: rgba(244, 239, 230, 0.12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--paper);
+      font-family: "Outfit", system-ui, sans-serif;
+      line-height: 1.5;
+    }
+    :focus-visible { outline: 2px solid #f4efe6; outline-offset: 3px; }
+    .skip { position: absolute; left: -999px; }
+    .skip:focus { left: 1rem; top: 1rem; z-index: 8; background: #fff; color: #000; padding: 0.5rem 0.8rem; text-decoration: none; }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.1rem 1.4rem; border-bottom: 1px solid var(--line);
+    }
+    header strong { display: block; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
+    header span { color: var(--mute); font-size: 0.8rem; }
+    header em { font-style: normal; font-weight: 800; }
+    .hero {
+      width: min(980px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 4.5rem 0 2.5rem;
+    }
+    h1 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(2.8rem, 7vw, 5.4rem);
+      line-height: 0.94;
+      font-weight: 400;
+      margin: 0 0 1rem;
+    }
+    .lede { max-width: 40rem; color: #d7d0c4; font-size: 1.12rem; }
+    .meta { display: flex; flex-wrap: wrap; gap: 0.7rem 1.4rem; padding: 1.4rem 0 0; color: var(--mute); font-size: 0.9rem; }
+    .grid {
+      width: min(1120px, calc(100% - 2.5rem));
+      margin: 0 auto 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    a.card {
+      display: grid;
+      gap: 0.35rem;
+      padding: 1.4rem 1.3rem 1.3rem;
+      text-decoration: none;
+      color: inherit;
+      min-height: 210px;
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+    a.card::after {
+      content: "Open preview →";
+      margin-top: auto;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    a.card:hover { transform: translateY(-2px); }
+    .kicker { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; }
+    .card h2 { font-family: "Instrument Serif", Georgia, serif; font-size: 1.85rem; margin: 0.15rem 0; font-weight: 400; }
+    .card p { margin: 0; color: inherit; opacity: 0.82; font-size: 0.95rem; }
+    .king { background: #100e0c; color: #efe6d8; }
+    .king .kicker, .king::after { color: #c8893a; }
+    .always { background: #1b1611; color: #f3e6d2; }
+    .always .kicker, .always::after { color: #c56a2d; }
+    .apperley { background: #0a1628; color: #ece7dc; }
+    .apperley .kicker, .apperley::after { color: #d4a017; }
+    .majestic { background: #06141a; color: #f3f7f6; }
+    .majestic .kicker, .majestic::after { color: #2ee6d6; }
+    .action { background: #140e0c; color: #f3e6d0; }
+    .action .kicker, .action::after { color: #c4311a; }
+    .sunrise { background: #2a1e16; color: #f6e4d0; }
+    .sunrise .kicker, .sunrise::after { color: #e39a45; }
+    .voltz { background: #07080b; color: #eef3e6; }
+    .voltz .kicker, .voltz::after { color: #d4f34a; }
+    .fresh { background: #16382c; color: #f3f6f0; }
+    .fresh .kicker, .fresh::after { color: #8fbf4d; }
+    .budget { background: #12241c; color: #f7f1e8; }
+    .budget .kicker, .budget::after { color: #c65d32; }
+    .note, footer {
+      width: min(980px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      color: var(--mute);
+      font-size: 0.9rem;
+    }
+    .note { padding-bottom: 3rem; }
+    .note a { color: #d7d0c4; }
+    footer { padding: 1.2rem 0 2.5rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    footer a { color: var(--mute); }
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+      header { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+    }
+  </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="top">
-    <div class="brand">
-      <strong>Prairie Heat & Cool</strong>
-      <span>Regina · Est. 2009</span>
+  <a class="skip" href="#sites">Skip to sites</a>
+  <header>
+    <div>
+      <strong>Regina Local Launch</strong>
+      <span>First wave · nine real shops</span>
     </div>
-    <a class="phone" href="tel:+13065550100">306-555-0100</a>
+    <em>Full agency sites</em>
   </header>
 
-  <main id="main">
-    <section class="hero">
-      <p class="eyebrow">Regina HVAC · Same-day when we can</p>
-      <h1>Furnace dead at −30°? We show up.</h1>
-      <p class="lede">Local techs for furnace, AC, and heat pumps. Clear pricing. No runaround.</p>
-      <div class="ctas">
-        <a class="btn primary" href="tel:+13065550100">Call for a free quote</a>
-        <a class="btn ghost" href="#book">Request a callback</a>
-      </div>
-      <ul class="trust">
-        <li>Licensed & insured</li>
-        <li>Regina & area</li>
-        <li>Parts warranty on repairs</li>
-      </ul>
-    </section>
+  <section class="hero">
+    <h1>I already built this for you.</h1>
+    <p class="lede">Full Home / Services / About / Contact sites for real Regina trade businesses. King Electric and Always Roofing are the first pair at the full bar. Distinct visual systems. Public facts only.</p>
+    <p class="meta">
+      <span>King + Always: four pages each</span>
+      <span>No invented phones, emails, or fake reviews</span>
+      <span>Prairie Heat demo archived</span>
+    </p>
+  </section>
 
-    <section class="services" id="services">
-      <h2>What we fix</h2>
-      <div class="grid">
-        <article>
-          <h3>Furnace</h3>
-          <p>No heat, weird noises, yearly tune-ups before winter hits.</p>
-        </article>
-        <article>
-          <h3>Air conditioning</h3>
-          <p>Installs, recharges, and mid-summer breakdowns.</p>
-        </article>
-        <article>
-          <h3>Heat pumps</h3>
-          <p>Cold-climate units and ductless mini-splits.</p>
-        </article>
-      </div>
-    </section>
+  <section class="grid" id="sites">
+    <a class="card king" href="sites/king-electric/">
+      <span class="kicker">Ready · Electrician</span>
+      <h2>King Electric LTD.</h2>
+      <p>Home · The work · The shop · Call 306-581-9837</p>
+    </a>
+    <a class="card always" href="sites/always-roofing/">
+      <span class="kicker">Ready · Roofer</span>
+      <h2>Always Roofing and Contracting</h2>
+      <p>Home · The envelope · Reach Mike · Call 306-209-5007</p>
+    </a>
+    <a class="card apperley" href="sites/apperley-electric/">
+      <span class="kicker">Electrician · commercial</span>
+      <h2>Apperley Electric Ltd.</h2>
+      <p>306-525-9704 · 1994 · Regina / Saskatoon / Yorkton</p>
+    </a>
+    <a class="card majestic" href="sites/majestic-air/">
+      <span class="kicker">HVAC · 40+ years</span>
+      <h2>Majestic Air Inc.</h2>
+      <p>306-525-3588 · Commercial / industrial HVAC/R</p>
+    </a>
+    <a class="card action" href="sites/action-roofing/">
+      <span class="kicker">Roofer · Cornwall Street</span>
+      <h2>Action Roofing Ltd.</h2>
+      <p>306-545-4677 · Commercial &amp; industrial · craftsman’s touch</p>
+    </a>
+    <a class="card sunrise" href="sites/sunrise-roofing/">
+      <span class="kicker">Roofer · 25+ years</span>
+      <h2>Sunrise Roofing</h2>
+      <p>306-526-8396 · White City mail · 10-year make-it-right</p>
+    </a>
+    <a class="card voltz" href="sites/voltz-electric/">
+      <span class="kicker">Electrician · Joshua Graff</span>
+      <h2>Voltz Electric 2020</h2>
+      <p>306-731-7972 · Fire alarm, fibre, HVAC controls</p>
+    </a>
+    <a class="card fresh" href="sites/fresh-electric/">
+      <span class="kicker">Electrician · everyone sweeps</span>
+      <h2>Fresh Electric Ltd.</h2>
+      <p>306-536-4737 · Commercial, residential, farm</p>
+    </a>
+    <a class="card budget" href="sites/budget-plumbing/">
+      <span class="kicker">HVAC / plumbing · 1985</span>
+      <h2>Budget Plumbing, Heating &amp; Air</h2>
+      <p>306-359-6688 · 144 5 Ave E · five towns named</p>
+    </a>
+  </section>
 
-    <section class="proof">
-      <h2>Why Regina homeowners call us</h2>
-      <blockquote>
-        <p>“Showed up the same afternoon. Quote was what they said on the phone.”</p>
-        <footer>— Sample review (demo site)</footer>
-      </blockquote>
-      <p class="fine">This is a sample site for Regina Local Launch Site. Swap in your name, photos, and phone.</p>
-    </section>
-
-    <section class="book" id="book">
-      <h2>Request a callback</h2>
-      <form class="form" onsubmit="event.preventDefault(); document.getElementById('status').textContent='Demo only — wire this to your inbox on a real job.';">
-        <label>Name <input name="name" required autocomplete="name" /></label>
-        <label>Phone <input name="phone" type="tel" required autocomplete="tel" /></label>
-        <label>What do you need?
-          <select name="need">
-            <option>Furnace</option>
-            <option>AC</option>
-            <option>Heat pump</option>
-            <option>Other</option>
-          </select>
-        </label>
-        <button type="submit" class="btn primary">Send request</button>
-        <p id="status" class="status" role="status"></p>
-      </form>
-    </section>
-
-    <section class="nap" id="contact">
-      <h2>Contact</h2>
-      <p><strong>Prairie Heat & Cool</strong><br />
-      Regina, SK<br />
-      <a href="tel:+13065550100">306-555-0100</a><br />
-      Mon–Sat 7am–7pm</p>
-    </section>
-  </main>
-
-  <footer class="foot">
-    <span>Demo for Regina Local Launch Site · $449 CAD</span>
-    <a href="#main">Back to top</a>
+  <p class="note">
+    Facts drawn from public listings and the businesses’ own pages. Hours marked as placeholders where unpublished.
+    The original fictional Prairie Heat demo is kept at
+    <a href="archive/prairie-heat/">archive/prairie-heat/</a> and is not the pitch.
+  </p>
+  <footer>
+    <span>Regina Local Launch · first wave</span>
+    <a href="README.md">README</a>
   </footer>
 </body>
 </html>
