@@ -2,7 +2,7 @@
 
 Full agency marketing sites for real Regina, SK trade businesses. Public facts only. Call is the primary action.
 
-**Rebuild tranche (layout-distinct, cinematic):** Fresh Electric, King Electric, Always Roofing. The cream-void two-pill look is retired.
+**All nine shops rebuilt** as layout-distinct cinematic systems. The cream-void two-pill look is retired.
 
 ## Open locally
 
@@ -19,12 +19,12 @@ Then open [http://localhost:4173](http://localhost:4173).
 | Fresh Electric Ltd. | [sites/fresh-electric/](sites/fresh-electric/) | Floor, The book, The crew, Reach |
 | King Electric LTD. | [sites/king-electric/](sites/king-electric/) | Home, The board, McDougall |
 | Always Roofing and Contracting | [sites/always-roofing/](sites/always-roofing/) | Home, Ridge/wall/eave, Mike |
-| Apperley Electric Ltd. | [sites/apperley-electric/](sites/apperley-electric/) | index, services, about, contact |
-| Majestic Air Inc. | [sites/majestic-air/](sites/majestic-air/) | index, services, about, contact |
-| Action Roofing Ltd. | [sites/action-roofing/](sites/action-roofing/) | index, services, about, contact |
-| Sunrise Roofing | [sites/sunrise-roofing/](sites/sunrise-roofing/) | index, services, about, contact |
-| Voltz Electric 2020 | [sites/voltz-electric/](sites/voltz-electric/) | index, services, about, contact |
-| Budget Plumbing, Heating & Air Conditioning Ltd. | [sites/budget-plumbing/](sites/budget-plumbing/) | index, services, about, contact |
+| Apperley Electric Ltd. | [sites/apperley-electric/](sites/apperley-electric/) | Province, Disciplines, The firm, Desk |
+| Majestic Air Inc. | [sites/majestic-air/](sites/majestic-air/) | Night, Systems, Cornwall, Dispatch |
+| Action Roofing Ltd. | [sites/action-roofing/](sites/action-roofing/) | Order, Punch list, Cornwall, Desk |
+| Sunrise Roofing | [sites/sunrise-roofing/](sites/sunrise-roofing/) | Dawn, The list, White City, Call |
+| Voltz Electric 2020 | [sites/voltz-electric/](sites/voltz-electric/) | Rack, Board, Letters, Josh |
+| Budget Plumbing, Heating & Air Conditioning Ltd. | [sites/budget-plumbing/](sites/budget-plumbing/) | Shop, Menu, 1985, 5th Ave |
 
 Directory: [index.html](index.html)
 
