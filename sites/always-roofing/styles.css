@@ -1,302 +1,193 @@
 :root {
-  --news: #f4efe4;
-  --ink: #1b1a17;
-  --rule: #1b1a17;
-  --rust: #9a3412;
-  --mute: #5c564c;
-  --sky: #d7e2e8;
-  --display: "Libre Baskerville", "Iowan Old Style", Georgia, serif;
-  --sans: "Archivo Narrow", "Arial Narrow", sans-serif;
+  --paper: #efe8dc;
+  --ink: #141311;
+  --rust: #b33a12;
+  --mute: #5e574c;
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --sans: "Public Sans", system-ui, sans-serif;
 }
-
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: var(--news);
+  background: var(--paper);
   color: var(--ink);
-  font-family: var(--display);
-  font-size: 17px;
-  line-height: 1.55;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
 }
 img { max-width: 100%; display: block; }
 a { color: var(--rust); }
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 
-/* Chrome: scrolling newspaper masthead. Not sticky, not a tel pill, not a dock. */
-.jump {
-  position: absolute;
-  left: -999px;
-}
+.jump { position: absolute; left: -999px; }
 .jump:focus {
-  left: 0.6rem;
-  top: 0.6rem;
-  z-index: 40;
-  background: var(--ink);
-  color: var(--news);
-  padding: 0.25rem 0.55rem;
-  text-decoration: none;
-  font-family: var(--sans);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-size: 0.72rem;
+  left: 0.5rem; top: 0.5rem; z-index: 40;
+  background: var(--ink); color: var(--paper);
+  padding: 0.25rem 0.5rem; text-decoration: none;
+  font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
 }
 
-.edition {
-  padding: 0.7rem 1.1rem 0.9rem;
-  border-bottom: 4px double var(--rule);
-  background: var(--news);
-}
-.edition .flag {
-  text-align: center;
-  color: inherit;
-  text-decoration: none;
-  display: block;
-}
-.edition .flag strong {
-  display: block;
-  font-size: clamp(2.4rem, 7vw, 4.6rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 0.9;
-}
-.edition .flag em {
-  display: block;
-  font-style: italic;
-  font-size: 0.95rem;
-  margin-top: 0.2rem;
-}
-.dateline {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-  margin-top: 0.55rem;
-  padding-top: 0.45rem;
-  border-top: 1px solid var(--rule);
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-.edition nav {
-  display: flex;
-  justify-content: center;
-  gap: 1.4rem;
-  margin-top: 0.55rem;
-  font-family: var(--sans);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-size: 0.82rem;
-}
-.edition nav a {
-  color: inherit;
-  text-decoration: none;
-  font-weight: 700;
-}
-.edition nav a[aria-current="page"] { border-bottom: 2px solid var(--ink); }
-
-.lead {
+/* Chrome: type flag that scrolls — not a newspaper WP theme, not sticky/pill/dock */
+.flagbar {
+  padding: 0.7rem 1rem 0.8rem;
   display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
-  gap: 1.6rem;
-  padding: 1.4rem 1.2rem 1.8rem;
-  border-bottom: 1px solid var(--rule);
+  grid-template-columns: auto 1fr auto;
+  gap: 0.8rem;
+  align-items: end;
+  border-bottom: 1px solid var(--ink);
 }
-.lead h1 {
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  line-height: 1.05;
-  margin: 0 0 0.7rem;
+.flagbar a.word {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  font-optical-sizing: auto;
+  line-height: 0.85;
+  color: inherit;
+  text-decoration: none;
 }
-.lead .deck { font-size: 1.15rem; max-width: 40rem; }
-.sidebar {
-  border-left: 1px solid var(--rule);
-  padding-left: 1.2rem;
-  font-family: var(--sans);
+.flagbar nav { display: flex; gap: 1.1rem; justify-content: center; }
+.flagbar nav a { color: inherit; text-decoration: none; font-weight: 700; font-size: 0.82rem; }
+.flagbar nav a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--ink); }
+.flagbar .mike { font-size: 0.78rem; font-weight: 600; text-align: right; }
+
+.wordmark {
+  padding: 0.4rem 1rem 0;
+  overflow: hidden;
 }
-.sidebar h2 {
-  font-family: var(--sans);
-  font-size: 0.82rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+.wordmark h1 {
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: clamp(5.2rem, 24vw, 19rem);
+  line-height: 0.72;
+  letter-spacing: -0.06em;
+  margin: 0 0 0  -0.06em;
+}
+.byline {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 1.2rem;
+  padding: 0.6rem 1rem 1.6rem;
+}
+.byline .deck { font-family: var(--display); font-size: clamp(1.15rem, 2.2vw, 1.45rem); max-width: 38rem; }
+.byline aside a.phone {
+  display: block;
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 0.9;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 3px solid var(--rust);
+  margin-bottom: 0.5rem;
+}
+
+/* Stacked trade words — not classifieds, not 3 equal cards */
+.trades { border-top: 1px solid var(--ink); }
+.trades a.row {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.45fr) 1fr;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--ink);
+  color: inherit;
+  text-decoration: none;
+}
+.trades a.row strong {
+  font-family: var(--display);
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  line-height: 0.8;
+  font-weight: 700;
+}
+.trades a.row span { align-self: center; max-width: 28rem; }
+.trades a.row:hover strong { color: var(--rust); }
+
+.aside-note { padding: 1.1rem 1rem 1.6rem; max-width: 40rem; color: var(--mute); font-size: 0.92rem; }
+
+/* Storm week — sticky weather words, additive to Home */
+.storm-open { padding: 1.3rem 1rem 0.6rem; max-width: 42rem; }
+.storm-open h1 {
+  font-family: var(--display);
+  font-size: clamp(2.6rem, 7vw, 4.6rem);
+  line-height: 0.95;
   margin: 0 0 0.5rem;
 }
-.sidebar p { margin: 0 0 0.7rem; }
-.sidebar a.phone {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--ink);
-  text-decoration: none;
-  border-bottom: 2px solid var(--rust);
-  margin-bottom: 0.6rem;
-}
-
-.weather-plate {
+.chapter {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  min-height: 42vh;
-  border-bottom: 1px solid var(--rule);
-}
-.weather-plate .media { min-height: 240px; background: #2a3136 center / cover no-repeat; }
-.weather-plate figcaption {
-  padding: 1.2rem;
-  font-size: 0.85rem;
-  color: var(--mute);
-  align-self: end;
-}
-
-.classifieds {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border-bottom: 1px solid var(--rule);
-}
-.classifieds article {
-  padding: 1.2rem;
-  border-right: 1px solid var(--rule);
-}
-.classifieds article:last-child { border-right: 0; }
-.classifieds h3 {
-  font-family: var(--sans);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.86rem;
-  margin: 0 0 0.4rem;
-}
-.classifieds p { margin: 0; font-size: 0.95rem; }
-
-/* Storm week — chronology, not Home classifieds */
-.storm-intro {
-  padding: 1.6rem 1.2rem 0.4rem;
-  max-width: 46rem;
-}
-.storm-intro h1 {
-  font-size: clamp(2.4rem, 6vw, 4rem);
-  line-height: 1.05;
-  margin: 0 0 0.6rem;
-}
-
-.sequence {
-  border-top: 4px double var(--rule);
-}
-.beat {
-  display: grid;
-  grid-template-columns: 7.5rem 1fr 0.9fr;
+  grid-template-columns: minmax(9rem, 0.32fr) 1fr minmax(140px, 0.28fr);
   gap: 1rem;
-  padding: 1.3rem 1.2rem;
-  border-bottom: 1px solid var(--rule);
+  padding: 1.4rem 1rem;
+  border-top: 1px solid var(--ink);
+  min-height: 56svh;
+  align-items: start;
 }
-.beat .when {
-  font-family: var(--sans);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.chapter .wx {
+  position: sticky;
+  top: 0.8rem;
+  font-family: var(--display);
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
+  line-height: 0.78;
   font-weight: 700;
-  font-size: 0.78rem;
+  letter-spacing: -0.04em;
 }
-.beat h2 {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  margin: 0 0 0.4rem;
-}
-.beat p { margin: 0 0 0.6rem; }
-.beat .media {
-  min-height: 180px;
-  background: #2a3136 center / cover no-repeat;
-}
-.beat figcaption {
-  grid-column: 2 / -1;
-  font-size: 0.78rem;
-  color: var(--mute);
-}
+.chapter h2 { font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 0.5rem; }
+.chapter p { margin: 0 0 0.7rem; max-width: 36rem; }
+.chapter figure { margin: 0; }
+.chapter img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+.chapter figcaption { margin-top: 0.35rem; font-size: 0.68rem; color: var(--mute); }
 
-.materials {
-  padding: 1.6rem 1.2rem 2rem;
-}
-.materials h2 {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+.lab { padding: 1.4rem 1rem 2rem; border-top: 1px solid var(--ink); }
+.lab h2 {
+  font-family: var(--display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
   margin: 0 0 0.4rem;
 }
-.materials .lede { max-width: 40rem; }
-.mat-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0;
-  margin-top: 1.2rem;
-  border-top: 1px solid var(--rule);
+.fail {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
 }
-.mat-grid article {
-  padding: 1.1rem 1rem 1.2rem 0;
-  border-right: 1px solid var(--rule);
-  padding-right: 1rem;
-  margin-right: 1rem;
+.fail th, .fail td {
+  text-align: left;
+  padding: 0.85rem 0.6rem 0.85rem 0;
+  border-top: 1px solid var(--ink);
+  vertical-align: top;
 }
-.mat-grid article:last-child { border-right: 0; margin-right: 0; }
-.mat-grid h3 {
-  font-family: var(--sans);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-size: 0.86rem;
-  margin: 0 0 0.4rem;
-  color: var(--rust);
-}
-.mat-grid p { margin: 0 0 0.55rem; font-size: 0.95rem; }
+.fail th { font-family: var(--display); font-size: 1.2rem; font-weight: 700; width: 22%; }
 
 .callout {
-  margin: 0 1.2rem 1.6rem;
-  padding: 1.1rem 1.2rem;
+  margin: 0 1rem 1.6rem;
+  padding: 1rem 1.1rem;
   background: var(--ink);
-  color: var(--news);
+  color: var(--paper);
 }
-.callout a {
-  color: var(--news);
-  font-family: var(--sans);
-  font-weight: 800;
-  font-size: 1.4rem;
-  text-decoration: none;
-  border-bottom: 2px solid #e8a078;
-}
+.callout a { color: var(--paper); font-family: var(--display); font-size: 1.6rem; text-decoration: none; border-bottom: 2px solid #e39a78; }
 
-.desk {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 70vh;
-}
+.desk { display: grid; grid-template-columns: 1fr 1fr; min-height: 78svh; }
 .desk-poster {
-  background: var(--ink);
-  color: var(--news);
-  padding: clamp(1.6rem, 4vw, 3rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  background: var(--ink); color: var(--paper);
+  padding: 1.4rem; display: flex; flex-direction: column; justify-content: flex-end;
 }
 .desk-poster a.giant {
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  color: inherit;
-  text-decoration: none;
-  line-height: 0.95;
-  font-weight: 700;
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 0.88; color: inherit; text-decoration: none;
 }
-.desk-facts { padding: clamp(1.6rem, 4vw, 3rem); align-self: center; }
-address { font-style: normal; line-height: 1.8; }
+.desk-facts { padding: 1.6rem; align-self: center; }
+address { font-style: normal; line-height: 1.75; }
 
-/* In-flow classified footer — never a fixed dock */
 .colophon {
-  border-top: 4px double var(--rule);
-  padding: 0.8rem 1.2rem 1.2rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-  font-family: var(--sans);
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  border-top: 1px solid var(--ink);
+  padding: 0.7rem 1rem 1rem;
+  display: flex; justify-content: space-between; gap: 0.8rem; flex-wrap: wrap;
+  font-size: 0.75rem;
 }
 .colophon a { color: inherit; }
 
 @media (max-width: 900px) {
-  .lead, .weather-plate, .classifieds, .beat, .mat-grid, .desk { grid-template-columns: 1fr; }
-  .sidebar { border-left: 0; border-top: 1px solid var(--rule); padding: 1rem 0 0; }
-  .classifieds article, .mat-grid article { border-right: 0; margin-right: 0; border-bottom: 1px solid var(--rule); }
-  .beat figcaption { grid-column: auto; }
+  .flagbar, .byline, .trades a.row, .chapter, .desk { grid-template-columns: 1fr; }
+  .flagbar .mike { text-align: left; }
+  .chapter { min-height: auto; }
+  .chapter .wx { position: static; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

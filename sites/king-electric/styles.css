@@ -1,263 +1,189 @@
 :root {
-  --ink: #1a140e;
-  --walnut: #2a1f16;
-  --paper: #f3e6d0;
-  --copper: #c57a2c;
-  --brass: #e4b56a;
-  --mute: #8a7460;
-  --line: #3a2d22;
+  --ink: #100c09;
+  --paper: #f6ead6;
+  --copper: #d07a24;
+  --brass: #e8be72;
+  --mute: #8d7763;
   --display: "Bodoni Moda", "Didot", "Times New Roman", serif;
-  --ticket: "IBM Plex Sans", system-ui, sans-serif;
+  --ui: "Inter Tight", "Helvetica Neue", sans-serif;
 }
-
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--ink);
   color: var(--paper);
-  font-family: var(--ticket);
-  font-size: 17px;
-  line-height: 1.55;
+  font-family: var(--ui);
+  font-size: 16px;
+  line-height: 1.5;
 }
 img { max-width: 100%; display: block; }
 a { color: var(--brass); }
 :focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
 
-/* Chrome: in-flow shop plaque. Scrolls away. Not sticky bar, not pill, not dock. */
-.jump {
-  position: absolute;
-  left: -999px;
-}
+.jump { position: absolute; left: -999px; }
 .jump:focus {
-  left: 0.8rem;
-  top: 0.8rem;
-  z-index: 40;
-  background: var(--copper);
-  color: var(--ink);
-  padding: 0.35rem 0.7rem;
-  text-decoration: none;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  left: 0.7rem; top: 0.7rem; z-index: 40;
+  background: var(--copper); color: var(--ink);
+  padding: 0.3rem 0.55rem; text-decoration: none; font-size: 0.75rem;
 }
 
+/* Chrome: ticket stub that scrolls away — not sticky, not a pill, not a dock */
 .plaque {
-  background: var(--copper);
-  color: var(--ink);
-  padding: 0.85rem 1.2rem 1rem;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.6rem 1.4rem;
-  align-items: end;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem 1.4rem;
+  padding: 0.55rem 1rem 0.65rem;
+  background: var(--copper); color: var(--ink);
 }
-.plaque .firm {
-  color: inherit;
-  text-decoration: none;
-}
+.plaque .firm { color: inherit; text-decoration: none; }
 .plaque .firm strong {
-  display: block;
-  font-family: var(--display);
-  font-style: italic;
-  font-weight: 600;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  line-height: 0.9;
+  font-family: var(--display); font-style: italic; font-weight: 600;
+  font-size: 1.35rem;
 }
-.plaque .firm span {
-  display: block;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-top: 0.25rem;
-}
-.plaque nav {
-  display: flex;
-  gap: 1.1rem;
-  align-items: baseline;
-}
-.plaque nav a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 600;
-}
+.plaque .firm span { display: block; font-size: 0.68rem; font-weight: 600; }
+.plaque nav { display: flex; gap: 1rem; margin-left: auto; }
+.plaque nav a { color: inherit; text-decoration: none; font-size: 0.78rem; font-weight: 600; }
 .plaque nav a[aria-current="page"] { border-bottom: 2px solid var(--ink); }
-.plaque .pin {
-  grid-column: 1 / -1;
-  font-size: 0.78rem;
-  font-weight: 600;
-}
+.plaque .pin { width: 100%; font-size: 0.72rem; font-weight: 600; margin: 0; }
 
-.horn {
-  padding: clamp(2rem, 6vw, 4.5rem) clamp(1.2rem, 4vw, 3rem) 1.4rem;
-  border-bottom: 1px solid var(--line);
+/* The number is the interface. It clips the viewport on purpose. */
+.dial {
+  position: relative;
+  padding: 1.2rem 1rem 0.4rem;
+  overflow: hidden;
 }
-.horn p.tag {
-  margin: 0 0 0.6rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--brass);
-  font-weight: 600;
-}
-.horn a.number {
+.dial a.number {
   display: block;
   font-family: var(--display);
   font-style: italic;
   font-weight: 600;
-  font-size: clamp(3.4rem, 11vw, 8.4rem);
-  line-height: 0.82;
-  letter-spacing: -0.04em;
+  font-optical-sizing: auto;
+  font-size: clamp(4.2rem, 16vw, 13.5rem);
+  line-height: 0.78;
+  letter-spacing: -0.055em;
   color: var(--paper);
   text-decoration: none;
-  max-width: 14ch;
+  white-space: nowrap;
+  margin-left: -0.06em;
+  transition: letter-spacing 0.5s ease;
 }
-.horn .blurb {
-  max-width: 40rem;
-  color: #d8c4aa;
-  margin: 1.1rem 0 0;
-}
-
-.chapter {
-  padding: clamp(1.8rem, 4vw, 3rem) clamp(1.2rem, 4vw, 3rem);
-  border-bottom: 1px solid var(--line);
-}
-.chapter h2 {
-  font-family: var(--display);
-  font-weight: 600;
-  font-style: italic;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  line-height: 0.95;
-  margin: 0 0 0.7rem;
-}
-.chapter .tag {
-  margin: 0 0 0.45rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--copper);
-  font-weight: 600;
-}
-.chapter p { max-width: 40rem; color: #d8c4aa; }
-
-.calls {
+.dial a.number:hover { letter-spacing: -0.02em; }
+.dial .meta {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.2rem;
+  max-width: 58rem;
+  margin-top: 0.8rem;
+  color: #ddc7ad;
 }
-.call-card {
-  padding: clamp(1.4rem, 3vw, 2.2rem);
-  border-top: 1px solid var(--line);
-  border-right: 1px solid var(--line);
+.dial .meta p { margin: 0 0 0.7rem; }
+.who {
+  padding: 1.4rem 1rem 2rem;
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 1.2rem;
+  border-top: 1px solid #2a2118;
 }
-.call-card:nth-child(2n) { border-right: 0; }
-.call-card h3 {
-  font-family: var(--display);
-  font-style: italic;
-  font-weight: 600;
-  font-size: clamp(1.6rem, 3vw, 2.3rem);
-  margin: 0 0 0.45rem;
+.who h2 {
+  font-family: var(--display); font-style: italic; font-weight: 600;
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+  line-height: 0.95; margin: 0;
 }
-.call-card p { margin: 0; color: #c9b49a; }
-.call-card a {
-  display: inline-block;
-  margin-top: 0.7rem;
-  color: var(--brass);
-  font-weight: 600;
+.who p { margin: 0 0 0.75rem; color: #ddc7ad; }
+
+/* Horizontal film — 2026, not a 2×2 brochure grid */
+.film-wrap { border-top: 1px solid #2a2118; }
+.film-head { padding: 1.1rem 1rem 0.4rem; }
+.film-head h2 {
+  font-family: var(--display); font-style: italic; font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3.6rem); margin: 0 0 0.4rem;
+}
+.film-head p { margin: 0; max-width: 38rem; color: #c9b49a; }
+.film {
+  display: flex;
+  gap: 0.8rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem;
+  scrollbar-color: var(--copper) var(--ink);
+}
+.panel {
+  flex: 0 0 min(78vw, 420px);
+  scroll-snap-align: start;
+  min-height: 22rem;
+  padding: 1.1rem 1.1rem 1.2rem;
+  background: #1a140f;
+  display: flex; flex-direction: column;
+}
+.panel h3 {
+  font-family: var(--display); font-style: italic; font-weight: 600;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 0.95; margin: 0 0 0.6rem;
+}
+.panel p { margin: 0; color: #c9b49a; flex: 1; }
+.panel a {
+  margin-top: 1rem;
+  color: var(--ink);
+  background: var(--brass);
   text-decoration: none;
-  border-bottom: 1px solid var(--copper);
+  font-weight: 700;
+  padding: 0.45rem 0.6rem;
+  align-self: start;
 }
 
-.split {
+/* Stamps, not 50/50 photo splits */
+.stamps {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  min-height: 58vh;
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  padding: 1rem;
+  border-top: 1px solid #2a2118;
 }
-.split .media { min-height: 280px; background: #120e0b center / cover no-repeat; }
-.split .copy { padding: clamp(1.6rem, 4vw, 2.8rem); align-self: center; }
-.split.flip { grid-template-columns: 0.9fr 1.1fr; }
-.caption {
-  font-size: 0.78rem;
-  color: var(--mute);
-  margin: 0.6rem 0 0;
-}
+.stamps figure { margin: 0; }
+.stamps img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.stamps figcaption { margin-top: 0.4rem; font-size: 0.72rem; color: var(--mute); }
 
 .standing {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0.2rem 0 0;
+  border-top: 1px solid #2a2118;
 }
-.standing div {
-  padding: clamp(1.3rem, 3vw, 2rem);
-  border-right: 1px solid var(--line);
-}
+.standing div { padding: 1rem; border-right: 1px solid #2a2118; }
 .standing div:last-child { border-right: 0; }
-.standing dt {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--copper);
-  font-weight: 600;
-}
-.standing dd { margin: 0.35rem 0 0; }
+.standing dt { font-size: 0.68rem; color: var(--copper); font-weight: 700; }
+.standing dd { margin: 0.3rem 0 0; }
 
-.board { margin: 0; overflow-x: auto; }
+.board { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; }
-th, td {
-  text-align: left;
-  padding: 1rem 1.2rem;
-  border-bottom: 1px solid var(--line);
-  vertical-align: top;
+th, td { text-align: left; padding: 0.95rem 1rem; border-bottom: 1px solid #2a2118; vertical-align: top; }
+th { font-size: 0.7rem; color: var(--copper); text-transform: none; }
+.shop-block { display: grid; grid-template-columns: 1fr 1fr; }
+.shop-block address, .shop-block dl { padding: 1.4rem 1rem; border-top: 1px solid #2a2118; }
+.shop-block address { font-style: normal; font-size: 1.1rem; line-height: 1.75; }
+.shop-block dt { font-size: 0.7rem; color: var(--copper); font-weight: 700; margin-top: 0.8rem; }
+.shop-block dd { margin: 0.15rem 0 0; }
+.note { color: var(--mute); padding: 0 1rem 1.6rem; max-width: 40rem; }
+.chapter { padding: 1.3rem 1rem 2rem; }
+.chapter h2 {
+  font-family: var(--display); font-style: italic; font-weight: 600;
+  font-size: clamp(2rem, 4vw, 3.2rem); margin: 0 0 0.5rem;
 }
-th {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--copper);
-}
-.shop-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.shop-block address, .shop-block dl {
-  padding: clamp(1.6rem, 4vw, 2.8rem);
-  border-top: 1px solid var(--line);
-}
-.shop-block address { font-style: normal; font-size: 1.15rem; line-height: 1.8; }
-.shop-block dt {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--copper);
-  font-weight: 600;
-  margin-top: 0.9rem;
-}
-.shop-block dd { margin: 0.2rem 0 0; }
-.note { color: var(--mute); padding: 0 clamp(1.2rem, 4vw, 3rem) 2rem; max-width: 40rem; }
 
-/* In-flow brass plate — never position:fixed */
 .brass {
-  background: var(--brass);
-  color: var(--ink);
-  padding: 1.4rem clamp(1.2rem, 4vw, 3rem);
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 1rem;
+  background: var(--brass); color: var(--ink);
+  padding: 1.1rem 1rem;
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem;
 }
-.brass strong {
-  font-family: var(--display);
-  font-style: italic;
-  font-size: 1.6rem;
-  display: block;
-}
+.brass strong { font-family: var(--display); font-style: italic; font-size: 1.45rem; display: block; }
 .brass a { color: inherit; font-weight: 700; }
 
 @media (max-width: 900px) {
-  .plaque { grid-template-columns: 1fr; }
-  .calls, .split, .split.flip, .standing, .shop-block, .brass { grid-template-columns: 1fr; }
-  .standing div, .call-card { border-right: 0; }
+  .dial .meta, .who, .stamps, .standing, .shop-block, .brass { grid-template-columns: 1fr; }
+  .plaque nav { margin-left: 0; }
+  .standing div { border-right: 0; border-bottom: 1px solid #2a2118; }
+  .dial a.number { white-space: normal; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .dial a.number { transition: none; }
+}
