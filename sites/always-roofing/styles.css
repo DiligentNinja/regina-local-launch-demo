@@ -118,7 +118,7 @@ a { color: var(--rust); }
   gap: 1rem;
   padding: 1.4rem 1rem;
   border-top: 1px solid var(--ink);
-  min-height: 70svh;
+  min-height: 56svh;
   align-items: start;
 }
 .chapter .wx {
