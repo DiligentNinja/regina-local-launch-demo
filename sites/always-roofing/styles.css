@@ -1,10 +1,11 @@
 :root {
-  --paper: #efe8dc;
-  --ink: #141311;
-  --rust: #b33a12;
-  --mute: #5e574c;
-  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
-  --sans: "Public Sans", system-ui, sans-serif;
+  --sky: #d8e3ea;
+  --paper: #f4f1ea;
+  --ink: #1e2428;
+  --rust: #9d3a18;
+  --mute: #5c656b;
+  --serif: "Ibarra Real Nova", "Iowan Old Style", Georgia, serif;
+  --sans: "Atkinson Hyperlegible", system-ui, sans-serif;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -13,181 +14,115 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 17px;
+  line-height: 1.55;
+  text-wrap: pretty;
 }
 img { max-width: 100%; display: block; }
 a { color: var(--rust); }
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-
 .jump { position: absolute; left: -999px; }
 .jump:focus {
   left: 0.5rem; top: 0.5rem; z-index: 40;
   background: var(--ink); color: var(--paper);
-  padding: 0.25rem 0.5rem; text-decoration: none;
-  font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.25rem 0.45rem; text-decoration: none; font-size: 0.72rem;
 }
 
-/* Chrome: type flag that scrolls — not a newspaper WP theme, not sticky/pill/dock */
+/* Chrome: slim person flag — not a 2022 Fraunces poster */
 .flagbar {
-  padding: 0.7rem 1rem 0.8rem;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 0.8rem;
-  align-items: end;
-  border-bottom: 1px solid var(--ink);
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.1rem;
+  padding: 0.7rem 1.1rem 0.65rem;
+  background: var(--sky); color: var(--ink);
 }
 .flagbar a.word {
-  font-family: var(--display);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 700;
-  font-optical-sizing: auto;
-  line-height: 0.85;
-  color: inherit;
-  text-decoration: none;
+  font-family: var(--serif); font-size: 1.35rem; font-weight: 600;
+  color: inherit; text-decoration: none; letter-spacing: -0.02em;
 }
-.flagbar nav { display: flex; gap: 1.1rem; justify-content: center; }
-.flagbar nav a { color: inherit; text-decoration: none; font-weight: 700; font-size: 0.82rem; }
-.flagbar nav a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--ink); }
-.flagbar .mike { font-size: 0.78rem; font-weight: 600; text-align: right; }
+.flagbar nav { display: flex; gap: 0.9rem; }
+.flagbar nav a { color: inherit; text-decoration: none; font-weight: 700; font-size: 0.85rem; }
+.flagbar nav a[aria-current="page"] { box-shadow: inset 0 -1px 0 var(--ink); }
+.flagbar .mike { margin: 0 0 0 auto; font-size: 0.8rem; color: var(--mute); }
 
-.wordmark {
-  padding: 0.4rem 1rem 0;
-  overflow: hidden;
+.notes { padding: 1.5rem 1.1rem 0.4rem; max-width: 40rem; }
+.notes h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  font-weight: 600; line-height: 1.2; margin: 0 0 0.75rem;
 }
-.wordmark h1 {
-  font-family: var(--display);
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-size: clamp(5.2rem, 24vw, 19rem);
-  line-height: 0.72;
-  letter-spacing: -0.06em;
-  margin: 0 0 0  -0.06em;
-}
-.byline {
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 1.2rem;
-  padding: 0.6rem 1rem 1.6rem;
-}
-.byline .deck { font-family: var(--display); font-size: clamp(1.15rem, 2.2vw, 1.45rem); max-width: 38rem; }
-.byline aside a.phone {
-  display: block;
-  font-family: var(--display);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  line-height: 0.9;
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 3px solid var(--rust);
-  margin-bottom: 0.5rem;
+.notes p { margin: 0 0 0.75rem; }
+.notes a.phone {
+  display: inline; font-family: var(--serif); font-size: 1.35rem;
+  color: inherit; text-decoration: none; border-bottom: 2px solid var(--rust);
 }
 
-/* Stacked trade words — not classifieds, not 3 equal cards */
-.trades { border-top: 1px solid var(--ink); }
-.trades a.row {
-  display: grid;
-  grid-template-columns: minmax(12rem, 0.45fr) 1fr;
-  gap: 1rem;
-  padding: 0.85rem 1rem;
-  border-bottom: 1px solid var(--ink);
-  color: inherit;
-  text-decoration: none;
-}
-.trades a.row strong {
-  font-family: var(--display);
-  font-size: clamp(2.6rem, 8vw, 6rem);
-  line-height: 0.8;
-  font-weight: 700;
-}
-.trades a.row span { align-self: center; max-width: 28rem; }
-.trades a.row:hover strong { color: var(--rust); }
+.woven { padding: 0.2rem 1.1rem 1.4rem; max-width: 42rem; }
+.woven h2 { font-family: var(--serif); font-size: 1.3rem; margin: 0 0 0.5rem; }
+.woven p { margin: 0 0 0.7rem; }
+.hint { font-size: 0.88rem; color: var(--mute); padding: 0 1.1rem 1.4rem; max-width: 40rem; }
 
-.aside-note { padding: 1.1rem 1rem 1.6rem; max-width: 40rem; color: var(--mute); font-size: 0.92rem; }
-
-/* Storm week — sticky weather words, additive to Home */
-.storm-open { padding: 1.3rem 1rem 0.6rem; max-width: 42rem; }
-.storm-open h1 {
-  font-family: var(--display);
-  font-size: clamp(2.6rem, 7vw, 4.6rem);
-  line-height: 0.95;
+/* Storm: weather × material score — additive, not Home remix */
+.score-open { padding: 1.3rem 1.1rem 0.6rem; max-width: 42rem; }
+.score-open h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
   margin: 0 0 0.5rem;
 }
-.chapter {
+.beat {
   display: grid;
-  grid-template-columns: minmax(9rem, 0.32fr) 1fr minmax(140px, 0.28fr);
-  gap: 1rem;
-  padding: 1.4rem 1rem;
-  border-top: 1px solid var(--ink);
-  min-height: 56svh;
+  grid-template-columns: 6.5rem 1fr minmax(120px, 11rem);
+  gap: 0.9rem;
   align-items: start;
+  padding: 1rem 1.1rem;
+  border-top: 1px solid color-mix(in oklab, var(--ink) 14%, var(--paper));
 }
-.chapter .wx {
-  position: sticky;
-  top: 0.8rem;
-  font-family: var(--display);
-  font-size: clamp(2.8rem, 8vw, 6.5rem);
-  line-height: 0.78;
-  font-weight: 700;
-  letter-spacing: -0.04em;
+.beat .wx {
+  font-family: var(--serif); font-size: 1.5rem; font-weight: 600;
+  margin: 0;
 }
-.chapter h2 { font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 0.5rem; }
-.chapter p { margin: 0 0 0.7rem; max-width: 36rem; }
-.chapter figure { margin: 0; }
-.chapter img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
-.chapter figcaption { margin-top: 0.35rem; font-size: 0.68rem; color: var(--mute); }
+.beat h2 { font-family: var(--serif); font-size: 1.2rem; margin: 0 0 0.35rem; }
+.beat p { margin: 0 0 0.55rem; }
+.beat figure { margin: 0; }
+.beat img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.beat figcaption { font-size: 0.68rem; color: var(--mute); margin-top: 0.3rem; }
 
-.lab { padding: 1.4rem 1rem 2rem; border-top: 1px solid var(--ink); }
-.lab h2 {
-  font-family: var(--display);
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  margin: 0 0 0.4rem;
+.matrix { padding: 1.2rem 1.1rem 1.8rem; border-top: 1px solid color-mix(in oklab, var(--ink) 14%, var(--paper)); }
+.matrix h2 { font-family: var(--serif); font-size: 1.4rem; margin: 0 0 0.4rem; }
+.matrix table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.matrix th, .matrix td {
+  text-align: left; vertical-align: top;
+  padding: 0.7rem 0.55rem 0.7rem 0;
+  border-top: 1px solid color-mix(in oklab, var(--ink) 14%, var(--paper));
 }
-.fail {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-.fail th, .fail td {
-  text-align: left;
-  padding: 0.85rem 0.6rem 0.85rem 0;
-  border-top: 1px solid var(--ink);
-  vertical-align: top;
-}
-.fail th { font-family: var(--display); font-size: 1.2rem; font-weight: 700; width: 22%; }
+.matrix th { font-family: var(--serif); font-weight: 600; }
 
 .callout {
-  margin: 0 1rem 1.6rem;
-  padding: 1rem 1.1rem;
-  background: var(--ink);
-  color: var(--paper);
-}
-.callout a { color: var(--paper); font-family: var(--display); font-size: 1.6rem; text-decoration: none; border-bottom: 2px solid #e39a78; }
-
-.desk { display: grid; grid-template-columns: 1fr 1fr; min-height: 78svh; }
-.desk-poster {
+  margin: 0 1.1rem 1.4rem; padding: 0.85rem 0.95rem;
   background: var(--ink); color: var(--paper);
-  padding: 1.4rem; display: flex; flex-direction: column; justify-content: flex-end;
+}
+.callout a { color: var(--paper); font-family: var(--serif); font-size: 1.25rem; }
+
+.desk { display: grid; grid-template-columns: 1fr 1fr; min-height: 74svh; }
+.desk-poster {
+  background: var(--sky); padding: 1.3rem;
+  display: flex; flex-direction: column; justify-content: flex-end;
 }
 .desk-poster a.giant {
-  font-family: var(--display);
-  font-size: clamp(2.2rem, 6vw, 4rem);
-  line-height: 0.88; color: inherit; text-decoration: none;
+  font-family: var(--serif); font-size: clamp(1.7rem, 4vw, 2.6rem);
+  color: inherit; text-decoration: none;
 }
-.desk-facts { padding: 1.6rem; align-self: center; }
-address { font-style: normal; line-height: 1.75; }
+.desk-facts { padding: 1.4rem; align-self: center; }
+address { font-style: normal; line-height: 1.7; }
 
 .colophon {
-  border-top: 1px solid var(--ink);
-  padding: 0.7rem 1rem 1rem;
-  display: flex; justify-content: space-between; gap: 0.8rem; flex-wrap: wrap;
-  font-size: 0.75rem;
+  border-top: 1px solid color-mix(in oklab, var(--ink) 14%, var(--paper));
+  padding: 0.7rem 1.1rem 1rem;
+  display: flex; justify-content: space-between; gap: 0.7rem; flex-wrap: wrap;
+  font-size: 0.75rem; color: var(--mute);
 }
 .colophon a { color: inherit; }
 
 @media (max-width: 900px) {
-  .flagbar, .byline, .trades a.row, .chapter, .desk { grid-template-columns: 1fr; }
-  .flagbar .mike { text-align: left; }
-  .chapter { min-height: auto; }
-  .chapter .wx { position: static; }
+  .flagbar .mike { margin-left: 0; }
+  .beat, .desk { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
