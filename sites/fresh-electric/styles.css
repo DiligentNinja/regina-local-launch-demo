@@ -168,6 +168,8 @@ address { font-style: normal; line-height: 1.7; }
   .rail nav { flex-direction: row; flex-wrap: wrap; margin: 0; }
   .stage, .foot { margin-left: 0; }
   .book article, .attach, .field-row, .reach, .intake dl { grid-template-columns: 1fr; }
-  .results td.name { width: auto; }
+  .results thead { display: none; }
+  .results tr { display: grid; gap: 0.2rem; padding: 0.75rem 0; }
+  .results td { border: 0; padding: 0; width: auto; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

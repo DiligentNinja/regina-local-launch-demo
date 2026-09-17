@@ -71,6 +71,7 @@ a { color: var(--rust); }
   display: grid;
   grid-template-columns: 6.5rem 1fr minmax(120px, 11rem);
   gap: 0.9rem;
+  align-items: start;
   padding: 1rem 1.1rem;
   border-top: 1px solid color-mix(in oklab, var(--ink) 14%, var(--paper));
 }
