@@ -125,3 +125,19 @@ address a, .map { color: var(--gold); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+.page-hero { width: min(1040px, calc(100% - 2.4rem)); margin: 0 auto; padding: 3.2rem 0 1.2rem; max-width: 44rem; }
+.long { width: min(1040px, calc(100% - 2.4rem)); margin: 0 auto 2.5rem; }
+.long article { padding: 1.45rem 0; border-top: 1px solid rgba(255,255,255,0.12); }
+.dock {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 3.3rem; padding: 0.8rem 1rem; font-weight: 800; text-decoration: none;
+}
+@media (min-width: 901px) { .dock { display: none; } }
+@media (max-width: 900px) {
+  body { padding-bottom: 4.5rem; }
+  .bar { flex-wrap: wrap; }
+  nav { order: 3; width: 100%; }
+}
+.dock { background: var(--gold); color: var(--navy); }

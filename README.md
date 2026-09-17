@@ -1,48 +1,41 @@
 # Regina Local Launch — first-wave sites
 
-**Ready to merge first:** King Electric and Always Roofing — one landing page each, sticky click-to-call, distinct identity.
+Full agency marketing sites for real Regina, SK trade businesses. Each brand is meant to read as a finished shop site: **Home · Services · About · Contact**, sticky click-to-call, and only public facts.
 
-Seven more trade previews live in `/sites/` and are not blocking this pair.
-
-The offer is: **I already built this for you — want it live on your domain for $449 CAD?**
-
-This is a static HTML/CSS project. No build step, no paid APIs, no invented contact data.
+**First pair at the full bar:** King Electric and Always Roofing.
 
 ## Open locally
-
-From the repo root:
 
 ```bash
 python3 -m http.server 4173
 ```
 
-Then open [http://localhost:4173](http://localhost:4173). The homepage lists every preview.
-
-Or open any `index.html` file directly in a browser. Google Fonts need a network connection.
+Then open [http://localhost:4173](http://localhost:4173).
 
 ## Paths
 
-| Business | Path | Phone |
+| Business | Path | Pages |
 |---|---|---|
-| King Electric LTD. **ready** | [sites/king-electric/](sites/king-electric/) | 306-581-9837 |
-| Always Roofing and Contracting **ready** | [sites/always-roofing/](sites/always-roofing/) | 306-209-5007 |
-| Apperley Electric Ltd. | [sites/apperley-electric/](sites/apperley-electric/) | 306-525-9704 |
-| Majestic Air Inc. | [sites/majestic-air/](sites/majestic-air/) | 306-525-3588 |
-| Action Roofing Ltd. | [sites/action-roofing/](sites/action-roofing/) | 306-545-4677 |
-| Sunrise Roofing | [sites/sunrise-roofing/](sites/sunrise-roofing/) | 306-526-8396 |
-| Voltz Electric 2020 | [sites/voltz-electric/](sites/voltz-electric/) | 306-731-7972 |
-| Fresh Electric Ltd. | [sites/fresh-electric/](sites/fresh-electric/) | 306-536-4737 |
-| Budget Plumbing, Heating & Air Conditioning Ltd. | [sites/budget-plumbing/](sites/budget-plumbing/) | 306-359-6688 |
+| King Electric LTD. | [sites/king-electric/](sites/king-electric/) | index, services, about, contact |
+| Always Roofing and Contracting | [sites/always-roofing/](sites/always-roofing/) | index, services, about, contact |
+| Apperley Electric Ltd. | [sites/apperley-electric/](sites/apperley-electric/) | index, services, about, contact |
+| Majestic Air Inc. | [sites/majestic-air/](sites/majestic-air/) | index, services, about, contact |
+| Action Roofing Ltd. | [sites/action-roofing/](sites/action-roofing/) | index, services, about, contact |
+| Sunrise Roofing | [sites/sunrise-roofing/](sites/sunrise-roofing/) | index, services, about, contact |
+| Voltz Electric 2020 | [sites/voltz-electric/](sites/voltz-electric/) | index, services, about, contact |
+| Fresh Electric Ltd. | [sites/fresh-electric/](sites/fresh-electric/) | index, services, about, contact |
+| Budget Plumbing, Heating & Air Conditioning Ltd. | [sites/budget-plumbing/](sites/budget-plumbing/) | index, services, about, contact |
 
-Directory homepage: [index.html](index.html)
+Directory: [index.html](index.html)
 
-## What is sourced vs placeholder
+## Facts vs placeholder
 
-- Phone, email, addresses, services, hours, and testimonials are taken from public listings or the business’s own site.
-- Where hours are unpublished, the page uses **Mon–Sat 8:00–6:00** and labels it as a **placeholder — confirm with the shop**.
-- Contact forms are client-side demos. They do not send mail until a form endpoint is wired.
-- Trust chips (Licensed · Insured · Regina & area) are used instead of invented reviews. Published testimonials (Action, Voltz) are quoted and attributed to the source page.
+- Phone, email, addresses, services, hours, and testimonials come from public listings or the business’s own site.
+- Unpublished hours use **Mon–Sat 8:00–6:00** labeled as a placeholder.
+- Contact forms are client-side until an inbox is wired.
+- No invented reviews. Published quotes (Action, Voltz) are attributed to the source page.
+- Trust chips (Licensed · Insured · Regina & area) stand in where reviews are not reprinted.
 
 ## Archived demo
 
-The fictional Prairie Heat & Cool sample is no longer the homepage pitch. It lives at [archive/prairie-heat/](archive/prairie-heat/).
+Fictional Prairie Heat & Cool: [archive/prairie-heat/](archive/prairie-heat/).

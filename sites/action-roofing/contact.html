@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Action Roofing Ltd.</title>
+  <meta name="description" content="Call Action Roofing at 306-545-4677. 575 Cornwall Street, Regina." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="bar">
+    <a class="mark" href="index.html">Action Roofing <em>Ltd.</em></a>
+    <nav aria-label="Primary"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a></nav>
+    <a class="call" href="tel:+13065454677">306-545-4677</a>
+  </header>
+  <main id="main">
+
+    <header class="page-hero"><p class="eyebrow">Cornwall Street</p><h1>Get Action on the roof.</h1></header>
+    <section class="contact">
+      <div>
+        <address><strong>Action Roofing Ltd.</strong><br />575 Cornwall Street<br />Regina, SK S4R 2H1<br />
+        <a href="tel:+13065454677">306-545-4677</a><br />
+        <a href="mailto:actionroofing@sasktel.net">actionroofing@sasktel.net</a></address>
+        <p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=575+Cornwall+Street+Regina+SK+S4R+2H1">Open in Google Maps</a> · <a class="map" href="https://actionroofingregina.ca/">Current site</a></p>
+      </div>
+      <form class="form" id="lead">
+        <h3>Request a callback</h3>
+        <label>Name <input name="name" required autocomplete="name" /></label>
+        <label>Phone <input name="phone" type="tel" required autocomplete="tel" /></label>
+        <label>Need <select name="need"><option>Repair</option><option>Maintenance</option><option>Emergency</option><option>Replacement</option><option>Commercial / industrial new work</option></select></label>
+        <label>Building notes <textarea name="notes" rows="4"></textarea></label>
+        <button class="btn solid" type="submit">Send request</button>
+        <p class="status" id="status" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+  <a class="dock" href="tel:+13065454677">Call 306-545-4677</a>
+  <footer class="foot"><p>Action Roofing Ltd. · 575 Cornwall Street, Regina</p><p><a href='services.html'>Services</a> · <a href='about.html'>About</a> · <a href='contact.html'>Contact</a></p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
