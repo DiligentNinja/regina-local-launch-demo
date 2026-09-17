@@ -78,8 +78,9 @@ nav a[aria-current="page"], nav a:hover { color: var(--rust); }
 .mast-inner {
   position: relative; z-index: 1;
   padding: clamp(1.6rem, 5vw, 4rem);
-  max-width: 22ch;
+  max-width: 42rem;
 }
+.mast-inner h1 { max-width: 11ch; }
 .kicker {
   letter-spacing: 0.2em;
   text-transform: uppercase;

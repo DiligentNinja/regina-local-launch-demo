@@ -62,20 +62,21 @@ nav a[aria-current="page"], nav a:hover { color: var(--leaf); }
 .hero {
   position: relative;
   min-height: 100svh;
-  display: grid;
-  grid-template-columns: 4.2rem 1fr;
 }
 .spine {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  z-index: 3;
+  width: 5.6rem;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--display);
   font-weight: 900;
-  font-size: clamp(3.2rem, 8vw, 6.4rem);
-  letter-spacing: -0.04em;
-  color: var(--leaf);
-  background: var(--void);
-  border-right: 1px solid var(--line);
+  font-size: clamp(3.6rem, 9vw, 7rem);
+  letter-spacing: 0.06em;
+  color: var(--void);
+  background: var(--leaf);
   padding: 1rem 0;
 }
 .hero-stage {
@@ -99,7 +100,8 @@ nav a[aria-current="page"], nav a:hover { color: var(--leaf); }
 .hero-copy {
   position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
   padding: clamp(1.4rem, 4vw, 3.2rem);
-  max-width: 46rem;
+  padding-left: clamp(6.6rem, 8vw, 8.2rem);
+  max-width: 52rem;
 }
 .kicker {
   margin: 0 0 0.7rem;
@@ -270,8 +272,12 @@ address { font-style: normal; line-height: 1.8; }
   .hero, .band-grid, .job, .job.reverse, .ledger, .hours-slab, .crew, .reach, .field-row {
     grid-template-columns: 1fr;
   }
-  .spine { writing-mode: horizontal-tb; transform: none; min-height: auto; padding: 0.4rem 1rem; font-size: 2rem; border-right: 0; border-bottom: 1px solid var(--line); }
-  .hero { grid-template-columns: 1fr; }
+  .spine {
+    writing-mode: horizontal-tb; transform: none;
+    width: 100%; height: auto; bottom: auto;
+    padding: 0.45rem 1rem; font-size: 2rem; letter-spacing: 0.18em;
+  }
+  .hero-copy { padding-left: clamp(1.4rem, 4vw, 3.2rem); }
   .hero-stage, .hero-stage img { min-height: 78svh; }
   .job.reverse .job-copy { order: unset; }
   .field-row { grid-template-columns: 1fr; gap: 0.4rem; }
