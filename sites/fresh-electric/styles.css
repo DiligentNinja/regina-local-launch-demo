@@ -135,4 +135,8 @@ th { color: var(--mute); font-weight: 600; }
   .facts div { grid-template-columns: 1fr; gap: 0.15rem; }
   h1 { font-size: 1.85rem; max-width: none; }
   .block { box-shadow: 4px 6px 0 rgba(28, 33, 30, 0.06); }
+  table, thead, tbody, th, td, tr { display: block; }
+  thead { position: absolute; left: -999px; }
+  td { border-top: 0; padding: 0.2rem 0; }
+  td:first-child { font-weight: 700; padding-top: 0.7rem; }
 }
