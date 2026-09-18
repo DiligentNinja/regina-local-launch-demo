@@ -105,21 +105,6 @@ h2 {
 }
 .block ul { margin: 0.4rem 0 0; padding-left: 1.15rem; }
 .block li { margin: 0.25rem 0; }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.98rem;
-  margin: 0.8rem 0;
-}
-caption { text-align: left; font-weight: 700; margin-bottom: 0.45rem; }
-th, td {
-  text-align: left;
-  vertical-align: top;
-  padding: 0.55rem 0.5rem 0.55rem 0;
-  border-top: 1px solid var(--line);
-}
-th { color: var(--mute); font-weight: 600; }
-.fine { color: var(--mute); font-size: 0.92rem; }
 .facts { margin: 0; display: grid; gap: 0.65rem; }
 .facts div { display: grid; grid-template-columns: 8.5rem 1fr; gap: 0.5rem; }
 .facts dt { color: var(--mute); font-weight: 600; }
@@ -135,8 +120,4 @@ th { color: var(--mute); font-weight: 600; }
   .facts div { grid-template-columns: 1fr; gap: 0.15rem; }
   h1 { font-size: 1.85rem; max-width: none; }
   .block { box-shadow: 4px 6px 0 rgba(28, 33, 30, 0.06); }
-  table, thead, tbody, th, td, tr { display: block; }
-  thead { position: absolute; left: -999px; }
-  td { border-top: 0; padding: 0.2rem 0; }
-  td:first-child { font-weight: 700; padding-top: 0.7rem; }
 }
