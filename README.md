@@ -2,7 +2,7 @@
 
 Full agency marketing sites for real Regina, SK trade businesses. Public facts only. Call is the primary action.
 
-**All nine shops** as layout-distinct sites. Fresh, King, and Always rebuilt again as contractor sites a client could show — civic shop, McDougall address, named-principal roofer. Public facts only. Call is the desk.
+**All nine shops** as layout-distinct sites. Fresh, King, and Always rebuilt to a Scroll Craft bar: typographic poster, split stage with OSM, chaptered editorial. Public facts only. Call is the desk. Diligent owner eye is the pitch gate.
 
 ## Open locally
 
@@ -16,9 +16,9 @@ Then open [http://localhost:4173](http://localhost:4173).
 
 | Business | Path | Pages |
 |---|---|---|
-| Fresh Electric Ltd. | [sites/fresh-electric/](sites/fresh-electric/) | Work, Services, Shop, Call |
-| King Electric LTD. | [sites/king-electric/](sites/king-electric/) | Home, Work, The shop |
-| Always Roofing and Contracting | [sites/always-roofing/](sites/always-roofing/) | Home, Weather, Call |
+| Fresh Electric Ltd. | [sites/fresh-electric/](sites/fresh-electric/) | Poster (one scroll). Inner paths refresh home. |
+| King Electric LTD. | [sites/king-electric/](sites/king-electric/) | Split stage + OSM (one scroll). Inner paths refresh home. |
+| Always Roofing and Contracting | [sites/always-roofing/](sites/always-roofing/) | Chaptered folio (one scroll). Inner paths refresh home. |
 | Apperley Electric Ltd. | [sites/apperley-electric/](sites/apperley-electric/) | Province, Disciplines, The firm, Desk |
 | Majestic Air Inc. | [sites/majestic-air/](sites/majestic-air/) | Night, Systems, Cornwall, Dispatch |
 | Action Roofing Ltd. | [sites/action-roofing/](sites/action-roofing/) | Order, Punch list, Cornwall, Desk |

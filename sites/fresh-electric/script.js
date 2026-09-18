@@ -1,54 +1,40 @@
 (function () {
   "use strict";
-  var nodes = document.querySelectorAll("[data-reveal]");
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            e.target.classList.add("fe-in");
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
-    );
-    nodes.forEach(function (n) { io.observe(n); });
-  } else {
-    nodes.forEach(function (n) { n.classList.add("fe-in"); });
-  }
+  var root = document.documentElement;
+  var body = document.body;
+  var stamps = document.querySelectorAll("#stamps b");
+  var close = document.getElementById("close");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  var btn = document.getElementById("fe-copy-brief");
-  if (btn) {
-    btn.addEventListener("click", function () {
-      var type = document.getElementById("fe-type");
-      var symptom = document.getElementById("fe-symptom");
-      var addr = document.getElementById("fe-addr");
-      var out = document.getElementById("fe-brief-out");
-      var text =
-        "Fresh Electric brief\n" +
-        "Type: " + (type ? type.value : "") + "\n" +
-        "Symptom: " + (symptom ? symptom.value : "") + "\n" +
-        "Address/access: " + (addr ? addr.value : "") + "\n" +
-        "Call: 306-536-4737";
-      if (out) {
-        out.hidden = false;
-        out.textContent = text;
-      }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(
-          function () { btn.textContent = "Brief copied"; },
-          function () { btn.textContent = "Copy failed — see brief below"; }
-        );
-      } else {
-        btn.textContent = "Brief shown below — copy manually";
-      }
-    });
+  function progress() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    return max > 0 ? window.scrollY / max : 0;
   }
-
-  document.querySelectorAll(".fe-faq-item summary").forEach(function (s) {
-    s.addEventListener("click", function () {
-      /* native details; sticky remains available */
+  function tick() {
+    var p = progress();
+    root.style.setProperty("--p", p.toFixed(4));
+    stamps.forEach(function (el) {
+      var at = parseFloat(el.getAttribute("data-at") || "1");
+      if (p >= at) el.classList.add("is-in");
     });
-  });
+    if (close && close.getBoundingClientRect().top < window.innerHeight * 0.62) {
+      body.classList.add("is-close");
+    } else {
+      body.classList.remove("is-close");
+    }
+  }
+  var shot = parseFloat(new URLSearchParams(window.location.search).get("p") || "");
+  if (!isNaN(shot)) {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    window.scrollTo(0, Math.max(0, max * shot));
+  }
+  tick();
+  window.addEventListener("scroll", tick, { passive: true });
+
+  if (!reduce && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    window.addEventListener("pointermove", function (e) {
+      root.style.setProperty("--mx", ((e.clientX / window.innerWidth) - 0.5).toFixed(3));
+      root.style.setProperty("--my", ((e.clientY / window.innerHeight) - 0.5).toFixed(3));
+    }, { passive: true });
+  }
 })();

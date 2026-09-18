@@ -1,54 +1,30 @@
 (function () {
   "use strict";
-  var nodes = document.querySelectorAll("[data-enter]");
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add("ar-visible");
-          io.unobserve(e.target);
-        }
-      });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-    nodes.forEach(function (n) { io.observe(n); });
-  } else {
-    nodes.forEach(function (n) { n.classList.add("ar-visible"); });
-  }
+  var root = document.documentElement;
+  var folio = document.getElementById("folio");
+  var ghost = document.getElementById("ghost");
+  var chapters = document.querySelectorAll("[data-folio]");
 
-  var btn = document.getElementById("ar-copy");
-  if (btn) {
-    btn.addEventListener("click", function () {
-      var trade = document.getElementById("ar-trade");
-      var see = document.getElementById("ar-see");
-      var wet = document.getElementById("ar-wet");
-      var addr = document.getElementById("ar-addr");
-      var out = document.getElementById("ar-brief");
-      var text =
-        "Always Roofing brief for Mike Stephenson\n" +
-        "Trade: " + (trade ? trade.value : "") + "\n" +
-        "Seen: " + (see ? see.value : "") + "\n" +
-        "Interior wet: " + (wet ? wet.value : "") + "\n" +
-        "Address: " + (addr ? addr.value : "") + "\n" +
-        "Call: 306-209-5007";
-      if (out) { out.hidden = false; out.textContent = text; }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(function () {
-          btn.textContent = "Brief copied";
-        });
-      }
-    });
+  function progress() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    return max > 0 ? window.scrollY / max : 0;
   }
-
-  document.querySelectorAll(".ar-copy-script").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var t = btn.getAttribute("data-copy") || "";
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(t).then(function () {
-          var prev = btn.textContent;
-          btn.textContent = "Copied";
-          setTimeout(function () { btn.textContent = prev; }, 1500);
-        });
-      }
+  function tick() {
+    root.style.setProperty("--p", progress().toFixed(4));
+    var mid = window.innerHeight * 0.4;
+    var current = "Title";
+    chapters.forEach(function (ch) {
+      var r = ch.getBoundingClientRect();
+      if (r.top <= mid) current = ch.getAttribute("data-folio") || current;
     });
-  });
+    if (folio) folio.textContent = current;
+    if (ghost) ghost.textContent = current;
+  }
+  var shot = parseFloat(new URLSearchParams(window.location.search).get("p") || "");
+  if (!isNaN(shot)) {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    window.scrollTo(0, Math.max(0, max * shot));
+  }
+  tick();
+  window.addEventListener("scroll", tick, { passive: true });
 })();
