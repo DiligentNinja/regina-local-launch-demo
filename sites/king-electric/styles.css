@@ -103,7 +103,7 @@ body.ke-body {
 .ke-sec h2 { font-family: var(--ke-display); font-weight: 800; font-size: clamp(1.4rem, 2.5vw, 1.9rem); margin: 0 0 .5rem; letter-spacing: -.01em; }
 .ke-sec p { color: var(--ke-muted); max-width: 60ch; margin: 0; }
 
-.ke-matrix, .ke-howto, .ke-area, .ke-visit-tease, .ke-faq, .ke-close, .ke-cards, .ke-shop-grid, .ke-plates, .ke-depth {
+.ke-matrix, .ke-howto, .ke-area, .ke-visit-tease, .ke-faq, .ke-close, .ke-cards, .ke-shop-grid, .ke-depth {
   padding: 2.25rem 0; border-top: 1px solid var(--ke-line);
 }
 
@@ -148,10 +148,6 @@ body.ke-body {
 .ke-atmos img { display: block; width: 100%; height: 160px; object-fit: cover; }
 .ke-atmos figcaption {
   font-size: .68rem; color: var(--ke-muted); padding: .5rem .65rem; font-family: var(--ke-display);
-}
-.ke-mood-tag {
-  display: inline-block; background: #fef08a; color: #713f12; font-weight: 800;
-  padding: .1rem .35rem; margin-right: .3rem; border-radius: 2px; font-size: .62rem;
 }
 .ke-visit-cta { display: flex; flex-direction: column; gap: .65rem; justify-content: center; }
 
@@ -203,8 +199,6 @@ body.ke-body {
 }
 .ke-shop-card h2 { font-family: var(--ke-display); margin: 0 0 .75rem; font-size: 1.15rem; }
 .ke-addr { font-size: 1.15rem; font-weight: 700; }
-.ke-plate-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
-.ke-plate-grid .ke-atmos img { height: 140px; }
 
 .ke-foot {
   display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 1.25rem;
@@ -230,8 +224,7 @@ body.ke-body {
 [data-rise].ke-show { opacity: 1; transform: none; }
 
 @media (max-width: 900px) {
-  .ke-factstrip, .ke-area-cards, .ke-visit-row, .ke-shop-grid, .ke-plate-grid, .ke-foot { grid-template-columns: 1fr; }
-  .ke-matrix-head, .ke-matrix-row { grid-template-columns: 3rem 1fr; }
+  .ke-factstrip, .ke-area-cards, .ke-visit-row, .ke-shop-grid,   .ke-matrix-head, .ke-matrix-row { grid-template-columns: 3rem 1fr; }
   .ke-matrix-head span:nth-child(3), .ke-matrix-head span:nth-child(4),
   .ke-matrix-row span:nth-child(3), .ke-matrix-row span:nth-child(4) { display: none; }
   .ke-tabs { margin-left: 0; width: 100%; }
