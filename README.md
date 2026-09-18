@@ -18,7 +18,7 @@ Then open [http://localhost:4173](http://localhost:4173).
 |---|---|---|
 | Fresh Electric Ltd. | [sites/fresh-electric/](sites/fresh-electric/) | Home, Services, The shop, Call |
 | King Electric LTD. | [sites/king-electric/](sites/king-electric/) | Home, What to say, Find the shop |
-| Always Roofing and Contracting | [sites/always-roofing/](sites/always-roofing/) | Home, Roof/siding/gutters, Call Mike |
+| Always Roofing and Contracting | [sites/always-roofing/](sites/always-roofing/) | Trade listing, The work, Call Mike |
 | Apperley Electric Ltd. | [sites/apperley-electric/](sites/apperley-electric/) | Province, Disciplines, The firm, Desk |
 | Majestic Air Inc. | [sites/majestic-air/](sites/majestic-air/) | Night, Systems, Cornwall, Dispatch |
 | Action Roofing Ltd. | [sites/action-roofing/](sites/action-roofing/) | Order, Punch list, Cornwall, Desk |
