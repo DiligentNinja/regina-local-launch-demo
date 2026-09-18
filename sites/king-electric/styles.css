@@ -91,6 +91,32 @@ body.is-won .shop .num { opacity: 0; }
   flex: 1;
   min-height: 0;
   margin-top: 0.85rem;
+  background: #2b3138;
+  outline: 1px solid var(--edge);
+  box-shadow: var(--shadow);
+}
+.map-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: end;
+  margin: 0;
+  padding: 0.85rem;
+  color: #d5dbe1;
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  font-size: 1.05rem;
+  line-height: 1.15;
+}
+.map-fallback span {
+  display: block;
+  font-family: var(--text);
+  font-weight: 400;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  color: #9aa3ab;
+  margin-top: 0.2rem;
 }
 .map {
   width: 100%;
@@ -99,11 +125,13 @@ body.is-won .shop .num { opacity: 0; }
   min-height: 22vh;
   filter: grayscale(0.4) contrast(1.06) blur(calc((1 - (var(--p))) * 1.2px));
   transform: scale(calc(0.96 + (var(--p) * 0.06)));
-  box-shadow: var(--shadow);
-  outline: 1px solid var(--edge);
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 .etch {
   position: absolute;
+  z-index: 2;
   inset: auto 0.8rem 0.8rem;
   margin: 0;
   font-family: var(--display);
@@ -200,7 +228,7 @@ body.is-won .etch { opacity: 1; transform: none; }
   }
   .col { height: auto; min-height: 0; }
   .shop { min-height: 0; }
-  .job { min-height: 0; filter: none; transform: none; }
+  .job { min-height: 0; overflow: auto; filter: none; transform: none; }
   .map { min-height: 18vh; }
   .divider .side { writing-mode: horizontal-tb; transform: none; left: auto; }
   .divider .left { top: 50%; left: 0.6rem; transform: translateY(-50%); }

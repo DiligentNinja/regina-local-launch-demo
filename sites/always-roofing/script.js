@@ -20,6 +20,11 @@
     if (folio) folio.textContent = current;
     if (ghost) ghost.textContent = current;
   }
+  var shot = parseFloat(new URLSearchParams(window.location.search).get("p") || "");
+  if (!isNaN(shot)) {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    window.scrollTo(0, Math.max(0, max * shot));
+  }
   tick();
   window.addEventListener("scroll", tick, { passive: true });
 })();
