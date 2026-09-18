@@ -1,1 +1,1 @@
-TEST &#38;amp; ENTITY
+TEST &amp;amp; ENTITY
