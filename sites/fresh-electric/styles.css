@@ -235,12 +235,12 @@ a { color: var(--lime); }
 .desk {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  min-height: 100svh;
+  min-height: 80svh;
 }
 .desk-on {
   background: var(--lime); color: var(--night);
-  padding: 7rem 1.4rem 1.8rem;
-  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 7rem 1.4rem 2.2rem;
+  display: flex; flex-direction: column; justify-content: center;
 }
 .desk-on a {
   font-family: var(--display); font-weight: 800;

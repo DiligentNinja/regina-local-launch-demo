@@ -183,12 +183,12 @@ a { color: var(--rust); }
 
 .reach {
   display: grid; grid-template-columns: 1.1fr 0.9fr;
-  min-height: 88svh;
+  min-height: 80svh;
 }
 .reach-on {
   background: var(--dusk); color: #eef3f6;
-  padding: 3rem 1.3rem 1.8rem;
-  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 3.4rem 1.3rem 2rem;
+  display: flex; flex-direction: column; justify-content: center;
 }
 .reach-on a {
   font-family: var(--display);
