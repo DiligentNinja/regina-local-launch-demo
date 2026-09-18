@@ -231,6 +231,54 @@ a { color: var(--lime); }
 }
 .chapter p { margin: 0 0 0.7rem; color: var(--mute); max-width: 42rem; }
 .chapter p:last-child { margin-bottom: 0; }
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem 1.4rem;
+  margin: 1rem 0 0;
+}
+.cards h3 {
+  font-family: var(--display); font-weight: 800;
+  font-size: 1.05rem; letter-spacing: -0.02em;
+  margin: 0 0 0.3rem; color: var(--ink);
+}
+.cards p { margin: 0; max-width: none; }
+
+.brief {
+  display: grid; gap: 0.85rem;
+  max-width: 36rem; margin: 1.1rem 0 0;
+}
+.brief label { display: grid; gap: 0.3rem; font-size: 0.82rem; color: var(--lime); }
+.brief input, .brief select, .brief textarea {
+  font: inherit; color: var(--ink);
+  background: #141816; border: 1px solid var(--line);
+  padding: 0.55rem 0.65rem; width: 100%;
+}
+.brief-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
+.brief .ghost, .brief .cta {
+  font-family: var(--display); font-weight: 800;
+  letter-spacing: -0.03em; text-decoration: none;
+}
+.brief .ghost {
+  background: transparent; color: var(--lime);
+  border: 1px solid var(--lime); padding: 0.45rem 0.75rem; cursor: pointer;
+}
+.brief .cta { color: var(--lime); border-bottom: 2px solid var(--lime); font-size: 1.2rem; }
+.brief-out {
+  margin: 1rem 0 0; padding: 0.8rem 1rem;
+  background: #141816; color: var(--ink);
+  font-size: 0.88rem; white-space: pre-wrap;
+}
+
+.trust {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.trust div { padding: 1rem 1.4rem; border-right: 1px solid var(--line); }
+.trust div:last-child { border-right: 0; }
+.trust dt { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); }
+.trust dd { margin: 0.3rem 0 0; font-weight: 600; }
 
 .desk {
   display: grid;
@@ -259,7 +307,8 @@ address { font-style: normal; line-height: 1.7; }
 .foot a { color: inherit; }
 
 @media (max-width: 820px) {
-  .hours, .civic li, .field, .still, .desk { grid-template-columns: 1fr; }
+  .hours, .civic li, .field, .still, .desk, .cards, .trust { grid-template-columns: 1fr; }
+  .trust div { border-right: 0; border-bottom: 1px solid var(--line); }
   .field article:nth-child(even) { padding-left: 0; border-left: 0; }
   .still figcaption { padding-left: 0; padding-top: 0.9rem; }
   .top nav { margin-left: 0; width: 100%; }

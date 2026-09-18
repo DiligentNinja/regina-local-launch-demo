@@ -43,8 +43,43 @@
         · <a href="https://www.facebook.com/OwnerMikeStephenson/">Facebook</a>
       </p>
       <p class="muted">BBB-accredited since 2019. Facebook shows a 100% recommend rate across 11 reviews — those quotes stay on Facebook. Service area is Regina &amp; area.</p>
+      <p>Have the address, whether it is roof, wall, or trough, and whether the interior is wet. That is the whole intake.</p>
     </div>
   </main>
+
+  <section class="wrap block" style="padding-bottom:2rem">
+    <p class="kicker">Intake</p>
+    <h2>Stage the brief. Then call Mike.</h2>
+    <p class="muted">This form does not send anything. It stages what you will say on 306-209-5007.</p>
+    <form class="brief">
+      <label>Trade
+        <select id="ar-trade">
+          <option>Roof</option>
+          <option>Siding</option>
+          <option>Gutters</option>
+        </select>
+      </label>
+      <label>What you see
+        <textarea id="ar-see" rows="3" placeholder="Missing shingles, stain after melt, ice at the drip, lifted course…"></textarea>
+      </label>
+      <label>Interior wet?
+        <select id="ar-wet">
+          <option>No / unknown</option>
+          <option>Yes — still dripping</option>
+          <option>Yes — stain only</option>
+        </select>
+      </label>
+      <label>Address
+        <input type="text" id="ar-addr" placeholder="Street and neighbourhood" />
+      </label>
+      <p>
+        <button type="button" id="ar-copy">Copy brief</button>
+        <a href="tel:+13062095007">Call 306-209-5007</a>
+      </p>
+    </form>
+    <pre id="ar-brief" hidden></pre>
+  </section>
+  <script src="script.js"></script>
 
   <footer class="colophon">
     <span>Always Roofing and Contracting · Regina, SK</span>
