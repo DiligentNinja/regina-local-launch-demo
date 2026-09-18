@@ -121,7 +121,7 @@ main { padding: 0 1.5rem 3rem; max-width: 72rem; }
 .fe-sec-head h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); margin: 0 0 .5rem; letter-spacing: -.01em; }
 .fe-sec-note { color: var(--fe-muted); max-width: 60ch; margin: 0; }
 
-.fe-proof, .fe-lanes, .fe-process, .fe-mood, .fe-account, .fe-faq, .fe-close, .fe-spec-block, .fe-intake {
+.fe-proof, .fe-lanes, .fe-process, .fe-account, .fe-faq, .fe-close, .fe-spec-block, .fe-intake {
   padding: 2.75rem 0; border-bottom: 1px solid var(--fe-line);
 }
 .fe-table-wrap { overflow-x: auto; border: 1px solid var(--fe-line); border-radius: 4px; }
@@ -163,21 +163,6 @@ main { padding: 0 1.5rem 3rem; max-width: 72rem; }
 .fe-steps h3 { margin: 0 0 .35rem; font-size: 1.1rem; }
 .fe-steps p { margin: 0; color: var(--fe-muted); }
 
-.fe-mood-rail {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem;
-}
-.fe-plate {
-  margin: 0; border: 1px dashed var(--fe-line); background: var(--fe-panel); border-radius: 4px; overflow: hidden;
-}
-.fe-plate img { display: block; width: 100%; height: 160px; object-fit: cover; filter: saturate(.85) contrast(1.05); opacity: .9; }
-.fe-plate figcaption {
-  font-family: var(--fe-mono); font-size: .62rem; color: var(--fe-muted);
-  padding: .55rem .65rem; line-height: 1.4; border-top: 1px dashed var(--fe-line);
-}
-.fe-plate-tag {
-  display: inline-block; color: #000; background: var(--fe-warn); font-weight: 600;
-  padding: .1rem .35rem; margin-right: .35rem; border-radius: 2px; letter-spacing: .04em;
-}
 
 .fe-account-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 1.25rem; }
 .fe-quote {
@@ -273,11 +258,7 @@ main { padding: 0 1.5rem 3rem; max-width: 72rem; }
   .fe-nav { flex-direction: row; flex-wrap: wrap; }
   .fe-rail-meta { margin-top: 0; flex-direction: row; align-items: center; width: 100%; }
   .fe-sticky { left: 0; }
-  .fe-lane-grid, .fe-mood-rail, .fe-account-grid, .fe-spec-grid, .fe-desk-grid, .fe-foot {
-    grid-template-columns: 1fr;
-  }
-}
+  .fe-lane-grid, }
 @media (max-width: 640px) {
-  .fe-mood-rail { grid-template-columns: 1fr 1fr; }
-  .fe-console h1 { max-width: none; }
+    .fe-console h1 { max-width: none; }
 }
