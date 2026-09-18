@@ -139,6 +139,10 @@ a { color: var(--rust); }
 .trades p { margin: 0 0 0.6rem; max-width: 40rem; }
 
 .faq { padding: 1.6rem 0 2.4rem; }
+.faq h2 {
+  font-family: var(--display); font-weight: 560;
+  font-size: 1.7rem; margin: 0 0 0.55rem;
+}
 .faq details { border-top: 1px solid var(--line); padding: 0.85rem 0; }
 .faq summary { cursor: pointer; font-weight: 700; list-style: none; }
 .faq summary::-webkit-details-marker { display: none; }
