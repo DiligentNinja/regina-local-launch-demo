@@ -87,4 +87,5 @@ a { color: var(--link); text-underline-offset: 0.14em; }
 
 @media (max-width: 760px) {
   .sheet { grid-template-columns: 1fr; }
+  .ad { order: -1; }
 }
