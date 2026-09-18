@@ -141,13 +141,11 @@ a:active { transform: translateY(1px); }
   background: var(--paper);
   color: var(--ink);
   min-height: 240svh;
-  display: grid;
-  align-content: center;
 }
 .ice .spread {
   position: absolute;
   left: 7.2rem;
-  top: 12vh;
+  top: 8vh;
   font-family: var(--display);
   font-size: clamp(7rem, 22vw, 16rem);
   letter-spacing: -0.08em;
@@ -156,7 +154,7 @@ a:active { transform: translateY(1px); }
   pointer-events: none;
   text-shadow: 12px 20px 36px rgba(16, 22, 18, 0.08);
 }
-.ice-copy { position: relative; z-index: 1; padding-top: 18vh; }
+.ice-copy { position: relative; z-index: 1; padding-top: 22vh; }
 .colophon {
   background: var(--paper);
   color: var(--ink);
