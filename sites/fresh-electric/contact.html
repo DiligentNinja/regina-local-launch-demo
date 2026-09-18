@@ -3,43 +3,114 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Call Fresh Electric · 306-536-4737</title>
-  <meta name="description" content="Call Fresh Electric Ltd. at 306-536-4737. PO Box 845, Pilot Butte, SK. Mon–Fri 7–5, on call 24 hours." />
+  <title>Desk — Fresh Electric Ltd. · 306-536-4737</title>
+  <meta name="description" content="Contact Fresh Electric Ltd. 306-536-4737. sarah.fresh.electric@outlook.com. PO Box 845 Pilot Butte SK. Mon–Fri 7–5, on-call 24h." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="top solid">
-    <a class="mark" href="index.html">Fresh Electric Ltd.</a>
-    <nav aria-label="Primary">
-      <a href="index.html">Work</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">Shop</a>
-      <a href="contact.html" aria-current="page">Call</a>
+<body class="fe-body">
+  <a class="fe-skip" href="#fe-main">Skip to desk</a>
+  <aside class="fe-rail" aria-label="Ops rail">
+    <a class="fe-mark" href="index.html">Fresh<span>Electric Ltd.</span></a>
+    <nav class="fe-nav" aria-label="Primary">
+      <a href="index.html">Floor</a>
+      <a href="services.html">Spec</a>
+      <a href="about.html">Crew</a>
+      <a href="contact.html" aria-current="page">Desk</a>
     </nav>
-    <a class="tel" href="tel:+13065364737">306-536-4737</a>
-  </header>
+    <div class="fe-rail-meta">
+      <p class="fe-live"><span class="fe-pulse" aria-hidden="true"></span> Mon–Fri 7–5 · on-call 24h</p>
+      <a class="fe-rail-tel" href="tel:+13065364737">306-536-4737</a>
+      <p class="fe-tag">Everyone sweeps.</p>
+    </div>
+  </aside>
+  <div class="fe-stage">
+    <header class="fe-topstrip"><p class="fe-src">Desk · intake · public contact facts</p><a class="fe-mail" href="mailto:sarah.fresh.electric@outlook.com">Email the desk</a></header>
+    <main id="fe-main">
+      <section class="fe-console" data-reveal>
+        <p class="fe-status"><b>DESK</b> Phone first for faults · email for the book</p>
+        <h1>Reach Fresh Electric Ltd.</h1>
+        <p class="fe-lede">Use the phone when power is down or the site is waiting. Use email when the ask can sit in the weekday book. Hours and addresses below are public facts only.</p>
+      </section>
 
-  <main id="main" class="desk">
-    <div class="desk-on">
-      <p>No form. The desk is the phone.</p>
-      <a href="tel:+13065364737">306-536-4737</a>
-      <p>Monday–Friday 7 a.m.–5 p.m. On call 24 hours. Free estimates.</p>
-    </div>
-    <div class="desk-off">
-      <address>
-        Fresh Electric Ltd.<br />
-        PO Box 845<br />
-        Pilot Butte, SK S0G 3Z0<br />
-        <a href="mailto:sarah.fresh.electric@outlook.com">sarah.fresh.electric@outlook.com</a>
-      </address>
-      <p>Have the address, the type of site (commercial, house, farm), and the fault. That is the whole intake.</p>
-      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Fresh+Electric+Pilot+Butte+SK">Maps search</a> · <a href="https://freshelectricltd.ca/">freshelectricltd.ca</a></p>
-      <p class="muted">Regina and surrounding. Mail is Pilot Butte.</p>
-    </div>
-  </main>
+      <section class="fe-desk-grid" data-reveal>
+        <article class="fe-desk-card">
+          <p class="fe-lane-id">PRIMARY</p>
+          <h2>Phone</h2>
+          <a class="fe-cta" href="tel:+13065364737">306-536-4737</a>
+          <p>Mon–Fri 7–5 desk · on-call 24 hours. Have address, symptom, and commercial / residential / rural ready.</p>
+        </article>
+        <article class="fe-desk-card">
+          <p class="fe-lane-id">ASYNC</p>
+          <h2>Email</h2>
+          <a class="fe-ghost" href="mailto:sarah.fresh.electric@outlook.com">sarah.fresh.electric@outlook.com</a>
+          <p>Non-urgent estimates, drawings, and scheduling notes. Do not email an active outage — call.</p>
+        </article>
+        <article class="fe-desk-card">
+          <p class="fe-lane-id">MAIL</p>
+          <h2>Postal</h2>
+          <p><strong>PO Box 845</strong><br />Pilot Butte SK S0G 3Z0</p>
+          <p>Work is Regina-area. Confirm site access on the phone.</p>
+        </article>
+        <article class="fe-desk-card">
+          <p class="fe-lane-id">WEB</p>
+          <h2>Public site</h2>
+          <a class="fe-ghost" href="https://freshelectricltd.ca" rel="noopener">freshelectricltd.ca</a>
+          <p>Source for named work text and published service list.</p>
+        </article>
+      </section>
+
+      <section class="fe-intake" data-reveal aria-labelledby="fe-intake-h">
+        <h2 id="fe-intake-h">Brief the call before you dial</h2>
+        <form class="fe-form" action="tel:+13065364737" method="get">
+          <label>Site type
+            <select name="type" id="fe-type">
+              <option>Commercial</option>
+              <option>Residential</option>
+              <option>Rural / farm</option>
+              <option>Controls / boiler</option>
+            </select>
+          </label>
+          <label>What failed
+            <textarea id="fe-symptom" rows="3" placeholder="Breaker trips, outage scope, lighting, trench, panel…"></textarea>
+          </label>
+          <label>Address / access notes
+            <input type="text" id="fe-addr" placeholder="Street, gate codes, after-hours access" />
+          </label>
+          <p class="fe-form-note">This form does not send data. It stages what you will say on the phone — then tap Call.</p>
+          <button type="button" class="fe-cta" id="fe-copy-brief">Copy brief to clipboard</button>
+          <a class="fe-cta" href="tel:+13065364737">Call 306-536-4737</a>
+        </form>
+        <pre class="fe-brief-out" id="fe-brief-out" hidden></pre>
+      </section>
+
+      <section class="fe-faq" data-reveal>
+        <h2>Desk FAQ</h2>
+        <div class="fe-faq-list">
+          <details class="fe-faq-item" open>
+            <summary>When should I call vs email?</summary>
+            <p>Call for outages, urgent faults, and same-day needs (on-call 24h). Email for estimates that can wait for Mon–Fri 7–5.</p>
+          </details>
+          <details class="fe-faq-item">
+            <summary>Is there a street shop address?</summary>
+            <p>Published mailing address is PO Box 845, Pilot Butte SK S0G 3Z0. Confirm where to meet a truck when you book.</p>
+          </details>
+          <details class="fe-faq-item">
+            <summary>Free estimates?</summary>
+            <p>Yes — published on the public site. Confirm what is included for your ticket on the call.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer class="fe-foot">
+      <div><strong>Fresh Electric Ltd.</strong><p>Everyone sweeps.</p></div>
+      <div class="fe-foot-links"><a href="tel:+13065364737">306-536-4737</a><a href="mailto:sarah.fresh.electric@outlook.com">Email</a></div>
+      <nav aria-label="Footer"><a href="index.html">Floor</a><a href="services.html">Spec</a><a href="about.html">Crew</a><a href="contact.html">Desk</a></nav>
+    </footer>
+  </div>
+  <div class="fe-sticky" role="region" aria-label="Call Fresh Electric"><span class="fe-sticky-label">Desk · on-call 24h</span><a class="fe-sticky-tel" href="tel:+13065364737">306-536-4737</a></div>
+  <script src="script.js"></script>
 </body>
 </html>
